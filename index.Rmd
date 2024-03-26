@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Collaborative Coding for Scientific Research: Git, GitHub, and open science"
+author: "Pat Bills & Kelly Kapsar"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -8,29 +8,36 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+github-repo: IBEEM-MSU/ibeem-collaborative-coding
+description: "This is a guide to developing and engaging with open/team science projects on GitHub."
 ---
 
-# Prerequisites
+# Introduction {#intro}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+## Abstract 
 
-The **bookdown** package can be installed from CRAN or Github:
+This is a guide to open/team science projects on GitHub. This is not an introduction to git but a follow-on to such an introduction. While there are many introductory tutorials out there, we have found that there is a lack of information on the “culture” of open science using git/GitHub. People discover others’ code/projects, but don’t quite understand how they are organized or how to bring up and problems they’ve encountered or suggested changes that they have. This workshop is designed to empower attendees to actively participate in and engage with the open science community by teaching the often overlooked norms and procedures for understanding and working with others’ code projects. 
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+## Learning objectives
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+By completing this workshop, participants will be able to: 
+1. Explore and understand the organization of a research project or package (Anatomy of well-organized GitHub repositories)
+2. Use others’ code in your own workflows
+3. Engage with the owners/maintainers and the broader coding community to identify and participate in discussion of issues
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+## Prerequisites
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+* **Coding**: Be comfortable with coding in a language like R and/or Python. In other words: You should be familiar with reading/writing and basic wrangling of files or dataframes. 
+  + Resources: 
+    + [Tidying data in R (Ch. in Data Science with R by Garrett Grolemund)](https://garrettgman.github.io/tidying/)
+    + [Tidying data in Python (Ch. in Python for Data Science by Turrell et al.)](https://aeturrell.github.io/python4DS/data-tidy.html)
+* **Git**: Have used Git to track changes in your code, OR have completed the  introduction to the "git" distributed version control system on the Software Carpentries website, and understand the terms: git add/staging, commits, commit message, git history, git remote, push, pull.  
+  + Resources: 
+    + [Version control with git (Software Carpentries)](https://swcarpentry.github.io/git-novice/) 
+* **GitHub**: Have at least minimal experience with github and ideally have a project with some of your code there. In other words: If you have no experience with Github, then, prior to the workshop using resources below, please create  an account and attempt to push/pull changes to it. If you have attended a previous workshop covering these tasks, then that is sufficient. 
+  + Resources: 
+    + [Version control with git and GitHub - general intro and RStudio set-up (NSF Arctic Data Center) ](https://learning.nceas.ucsb.edu/2023-02-arctic/version-control-with-git-and-github.html#version-control-with-git-and-github)
+    + [Integrating git and GitHub with VS Code for Python users (VS Code tutorial)](https://code.visualstudio.com/docs/introvideos/versioncontrol) 
+* **Open Science**: Desire to become more of an active participant in the open science community.  In other words: Be curious about using others' code and writing code that others can use.
+
+
