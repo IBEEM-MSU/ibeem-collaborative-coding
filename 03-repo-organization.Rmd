@@ -1,2 +1,25 @@
 # Anatomy of a GitHub repository {#repo-organization}
 
+## Types of repositories: 
+* Package (installable) 
+* Project (useable) 
+* Reference (readable) 
+
+## Implications of repository type for re-use
+
+## Directory structures 
+What to look for when using someone else's code
+
+## Dependencies/requirements
+
+## Interaction of source scripts 
+(R and python)
+
+## Package vs project structures
+
+## Finding branches in GitHub
+Where to find and look at branches in GitHub 
+
+## Versioning and releases
+
+## Forks
