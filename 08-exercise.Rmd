@@ -1,2 +1,13 @@
 # Exercise: Working with a repo {#exercise}
 
+Cloning a repository and using the code therein to get a result 
+
+## Instructions: 
+* Select a repository from 3 choices: Python, R, Markdown
+* Clone, follow instructions to get it working.  
+  + Is there a minimum example?  
+  + Can you run the tests? 
+  + What is the version, release? 
+  + What's new based on the change log?
+* Find an issue that needs to be fixed.  
+  + What would you do to fix it?

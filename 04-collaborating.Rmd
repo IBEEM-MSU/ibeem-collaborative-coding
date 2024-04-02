@@ -1,2 +1,58 @@
 # Collaborating with GitHub {#collaborating}
 
+## Understanding commits 
+
+### How people communicate using commit messages
+Perspective of commit messages as communication can change what you include in a commit (independent of github)
+
+
+## Project management with GitHub
+Using Github's project management lite features
+
+## Issue management
+What is issue management? 
+Following issues and their fixes can help you track down your bugs 
+
+### Pandas Example: 
+* [My commit](https://github.com/krishnanlab/geneplexus_app/commit/80256c10d65f22fdd63898225948e36d4d63d29b)  
+* [Found someone else that had the same problem](https://github.com/pandas-dev/pandas/issues/8206) 
+* [Found this in the source-code for the documentation](https://github.com/pandas-dev/pandas/blob/bdc79c146c2e32f2cab629be240f01658cfb6cc2/pandas/core/generic.py#L3888)
+* [This is mentioned in the release notes for verion 1.5.0](https://pandas.pydata.org/pandas-docs/version/1.5/whatsnew/v1.5.0.html#other-deprecations)
+  + The release notes have a link to the issue(s) for every change, including this one GH9568 , which spells out why the change was made.
+* Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   
+
+
+## Communication using issues 
+
+### Requesting help/features or reporting bugs (using reprexes).  
+
+### Example: How ask package maintainers to accommodate the global dateline and very high latitudes 
+* https://github.com/rstudio/leaflet/issues/495
+  + This is a great example of an obtuse issue.  There is an R package "MapView" this is a 1-stop-mapping thing, super easy.  Someone there raised an issue.   MapView depends on RLeaflet (I just know this, it doesn't say that anywhere in the issue).  The leader of the MapView project realized that it was an RLeaflet problem, so copy/pasted the issue into the RLeaflet project.  I say RLeaflet because that project actually heavily depends on the original leaflet.js for javascript, which most people just called "leaflet". Another interesting thing is that the first commenter (Darcy somebody) says that polygons are fine, which does not need to be said because the OP already said it was ok, but no one piled on and said "he already said that." Note the issue was raised in 2015 and no one was assigned and it was not fixed.   The issue was reference in 2018 for new issue (created by Rstudio) to fix it, and I only know that because in the new issue they referenced the issue number.    but even that one was not fixed.   also in the original issue is an extensive post to show a work-around.  That info now just =sits here in a github issue.    A question for the group: what should have been done by the project to deal with this issue (hints, create an issue to add the work-around in the documentation, when creating a new issue, close the original and reference the new one..  possibly tag it as "wontfix" or better tag it in a project roadmap to make it clear they care about it and will deal with at some future time.
+* https://github.com/rstudio/leaflet/issues/225
+
+### Example: ggmap package
+Issue with Pacific mapping with ggmap: https://github.com/dkahle/ggmap/issues/326 
+* (solution is to change the projection, the software is not the problem, but is it in the docs?)
+* Another person had a question/problem but it was totally ignored: https://github.com/dkahle/ggmap/issues/295  
+  + Why is that?  
+  + Is there a document for this package describing how to participate in the community?  
+  + Are the volunteers following the lead of the owner?
+  + Who is fine ignoring these?
+
+## Engaging with the community 
+
+Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
+
+### What is a 'pull request?' (PR) (hint: it's a github thing)
+* A PR lifecycle: 
+  + Issue
+  + Fork/Branch
+  + PR
+  + Merge
+
+## Github link awesomeness
+* Permalinks in code and issues
+* References to issues from commits and referencing to commits from comments
+
+

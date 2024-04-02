@@ -1,3 +1,28 @@
 # Review: Principles of Git {#git-review}
 
+## Distributed version control
+What is "distributed version control" and how to did Git lay the foundation for the golden age of software development? 
+
+## Why use Git? 
+
+## Why use GitHub?  
+What is it in the context of Git and how did GitHub usher in the golden age of software development? 
+
+## Alternatives to github 
+* [GitLab](https://about.gitlab.com/)
+* [Bitbucket](https://bitbucket.org/product)
+* rol your own
+
+##  Git/GitHub workflow: 
+* Staging
+* Committing
+* Pushing
+
+## Branching with git
+
+## Working with remotes 
+* Set
+* Push/pull
+* Permissions
+
 ## Glossary 
