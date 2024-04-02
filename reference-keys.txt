@@ -2,6 +2,7 @@ intro
 abstract
 learning-objectives
 prerequisites
+license
 git-review
 distributed-version-control
 why-use-git
