@@ -1,0 +1,9 @@
+name: hello-github
+on: push
+jobs:
+  be-welcoming:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Say Hello
+        run: echo "Hello world!"
