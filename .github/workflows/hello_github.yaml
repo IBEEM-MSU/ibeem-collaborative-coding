@@ -1,0 +1,11 @@
+# this is a test workflow that works,
+# to be deleted after render book workflow confirmed working
+name: hello-github
+on: push
+jobs:
+  be-welcoming:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Say Hello
+        run: echo "Hello world!"
