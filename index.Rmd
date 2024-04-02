@@ -1,4 +1,4 @@
---- 
+---
 title: "Collaborative Coding for Scientific Research: Git, GitHub, and open science"
 author: "Pat Bills & Kelly Kapsar"
 date: "`r Sys.Date()`"
@@ -14,30 +14,32 @@ description: "This is a guide to developing and engaging with open/team science 
 
 # Introduction {#intro}
 
-## Abstract 
+## Abstract
 
-This is a guide to open/team science projects on GitHub. This is not an introduction to git but a follow-on to such an introduction. While there are many introductory tutorials out there, we have found that there is a lack of information on the “culture” of open science using git/GitHub. People discover others’ code/projects, but don’t quite understand how they are organized or how to bring up and problems they’ve encountered or suggested changes that they have. This workshop is designed to empower attendees to actively participate in and engage with the open science community by teaching the often overlooked norms and procedures for understanding and working with others’ code projects. 
+This is a guide to open/team science projects on GitHub. This is not an introduction to git but a follow-on to such an introduction. While there are many introductory tutorials out there, we have found that there is a lack of information on the “culture” of open science using git/GitHub. People discover others’ code/projects, but don’t quite understand how they are organized or how to bring up and problems they’ve encountered or suggested changes that they have. This workshop is designed to empower attendees to actively participate in and engage with the open science community by teaching the often overlooked norms and procedures for understanding and working with others’ code projects.
 
 ## Learning objectives
 
-By completing this workshop, participants will be able to: 
-1. Explore and understand the organization of a research project or package (Anatomy of well-organized GitHub repositories)
-2. Use others’ code in your own workflows
-3. Engage with the owners/maintainers and the broader coding community to identify and participate in discussion of issues
+By completing this workshop, participants will be able to: 1. Explore and understand the organization of a research project or package (Anatomy of well-organized GitHub repositories) 2. Use others’ code in your own workflows 3. Engage with the owners/maintainers and the broader coding community to identify and participate in discussion of issues
 
 ## Prerequisites
 
-* **Coding**: Be comfortable with coding in a language like R and/or Python. In other words: You should be familiar with reading/writing and basic wrangling of files or dataframes. 
-  + Resources: 
-    + [Tidying data in R (Ch. in Data Science with R by Garrett Grolemund)](https://garrettgman.github.io/tidying/)
-    + [Tidying data in Python (Ch. in Python for Data Science by Turrell et al.)](https://aeturrell.github.io/python4DS/data-tidy.html)
-* **Git**: Have used Git to track changes in your code, OR have completed the  introduction to the "git" distributed version control system on the Software Carpentries website, and understand the terms: git add/staging, commits, commit message, git history, git remote, push, pull.  
-  + Resources: 
-    + [Version control with git (Software Carpentries)](https://swcarpentry.github.io/git-novice/) 
-* **GitHub**: Have at least minimal experience with github and ideally have a project with some of your code there. In other words: If you have no experience with Github, then, prior to the workshop using resources below, please create  an account and attempt to push/pull changes to it. If you have attended a previous workshop covering these tasks, then that is sufficient. 
-  + Resources: 
-    + [Version control with git and GitHub - general intro and RStudio set-up (NSF Arctic Data Center) ](https://learning.nceas.ucsb.edu/2023-02-arctic/version-control-with-git-and-github.html#version-control-with-git-and-github)
-    + [Integrating git and GitHub with VS Code for Python users (VS Code tutorial)](https://code.visualstudio.com/docs/introvideos/versioncontrol) 
-* **Open Science**: Desire to become more of an active participant in the open science community.  In other words: Be curious about using others' code and writing code that others can use.
+-   **Coding**: Be comfortable with coding in a language like R and/or Python. In other words: You should be familiar with reading/writing and basic wrangling of files or dataframes.
+    -   Resources:
+        -   [Tidying data in R (Ch. in Data Science with R by Garrett Grolemund)](https://garrettgman.github.io/tidying/)
+        -   [Tidying data in Python (Ch. in Python for Data Science by Turrell et al.)](https://aeturrell.github.io/python4DS/data-tidy.html)
+-   **Git**: Have used Git to track changes in your code, OR have completed the introduction to the "git" distributed version control system on the Software Carpentries website, and understand the terms: git add/staging, commits, commit message, git history, git remote, push, pull.
+    -   Resources:
+        -   [Version control with git (Software Carpentries)](https://swcarpentry.github.io/git-novice/)
+-   **GitHub**: Have at least minimal experience with github and ideally have a project with some of your code there. In other words: If you have no experience with Github, then, prior to the workshop using resources below, please create an account and attempt to push/pull changes to it. If you have attended a previous workshop covering these tasks, then that is sufficient.
+    -   Resources:
+        -   [Version control with git and GitHub - general intro and RStudio set-up (NSF Arctic Data Center)](https://learning.nceas.ucsb.edu/2023-02-arctic/version-control-with-git-and-github.html#version-control-with-git-and-github)
+        -   [Integrating git and GitHub with VS Code for Python users (VS Code tutorial)](https://code.visualstudio.com/docs/introvideos/versioncontrol)
+-   **Open Science**: Desire to become more of an active participant in the open science community. In other words: Be curious about using others' code and writing code that others can use.
 
+## License
 
+This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-ShareAlike 4.0 International<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/>
+</a>
+
+</p>
