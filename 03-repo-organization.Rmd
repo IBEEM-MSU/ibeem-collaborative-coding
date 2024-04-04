@@ -1,21 +1,119 @@
 # Anatomy of a GitHub repository {#repo-organization}
 
-## Types of repositories: 
-* Package (installable) 
-* Project (useable) 
-* Reference (readable) 
+This chapter will provide orientation to open science code repositories, via github, so you can find and use code that may be useful to you. 
+
+We learned to organize and work through our own projects by observing how others organize theirs.  The amazing thing is that you can find hundreds of excellent examples to learn from as even major companies put their code on github.   
+
+<!-- note: maybe move this to chapter 2 -->
+
+In this book we may use the terms "repository", "project", or "code-base" interchangeably but they have slightly different meanings: 
+
+- "Code base" is a colloquial term for any collection of related to code in one or more files that works together to perform a function, or provide an application.  
+
+- A "repository" is an collection of code managed by git, not necessarily on an external server (either on github or elsewhere).  This could be on your laptop.  The database of vesion history is inside the .git folder, and so that .git folder is the repository.  We say this is a "git repo"
+
+- Github also calls their units  a "repository", so in Github the URL pattern `github.com/<user_name>/<repository_name>` contains a git repository (and possibly more than one )  
+
+- We may think of projects as code base plus associated data files, and all of the work needed to complete the research.  However, git hub uses "project" to mean "project management features" (task tracking, due dates, work progress monitoring) which can be used for one or more repos.   A research project may require multiple repos (one for data entry & cleaning, one for analysis, and one for a website to show it all off) and a git hub project can tie those together.  This is a new feature that we won't go into much but we will go into the existing project management features that github has for repos (issue tracking)
+
+<!-- end block to move -->
+
+## Why read the source code?
+
+First, why would we be a github tourist in the first place? Let set out a few reasons you may examine or use another project's code (either via github or from some other site):
+
+- track down a problem you are having by understanding how the code is working or has changed;
+- use the code to perform a function you need, either in whole or in part;
+- for better understanding of how to program: see how others have written and organized code, programming structures, or files in a project. 
+
+In the old days of open source programming, a phrase used to track down a problem with a system was "use the source, Luke." 
+
+Are there other reasons? 
+ 
+## Types of repositories
+
+There are many ways to categorize software but, from the perspective of open science, let's consider the axis of how we use the software.  We find that there are (at least) three identifiable categories of code bases in terms of how you would use the code and maybe interact with the code base. 
+
+There are many other ways to categorize software (language, function, outputs, domain, style, etc etc), seeing code bases in these categories these may help you understand what kind of code base you are developing and thus organize your files and code.   
+
+
+### Library/Package Project (installable)
+
+These are the free and open packages we install for R, Python, Julia, Java, Rust, etc etc.  These could also be stand-alone programs written in any language, for example we use the GDAL system 
+
+These may be called packages, libraries, binaries,extensions, etc.  
+
+The goal of these projects is to be used by others for a general purpose.   Most of the work we do is not to create packages, but if we find that "function" (NB need a better word here) of our code is applicable to a larger class of problems than the one we are solving, it may be worth creating a package.  
+
+As a user of such a package, you don't need to access the code via github - you can most likely install from a package system (like Pypi, R package mirror,)
+All of us use package Creating an R package 
+
+
+### Project (useable) 
+
+These codebases may not be installable projects, but are intended to be re-used by someone else, and that is often your future self!   Many of these include instructions for clone the code, getting all the piece you need installed, and using the program.  
+
+An example of this is https://github.com/billspat/hpcc_megadetector which was created for a handful of researchers at MSU to run a specific chunk of python code to identify wildlife in millions of photos.  There are already existing deep-learning model code, and an install GUI program, but nothing specific to running on MSU's super computer.  To accomplish this we forked just the pieces of code we needed from this existing system, modified it to do the work we needed, created 'wrapper scripts' that coudl run them on HPC, and added documentation.  it hasn't been used in two years not and it would require updataing to be used again.  
+
+Another example of a 'project' repositories are specific-purpose web applications.   If your goal is to create a web application to help others use your software (rather than write a desktop application or leave it as command line only) then starting with an existing 
+
+
+### Reference (readable) 
+
+There are many reason why code is published for transparent reference rather than to be re-useable.  For one, the programming effort is significant to create code that's useable by others.   Many of our research or academic code is useless with out the input data, and those data sets are frequently no able to be published if they are acquired from a private source.   
+
+Many projects use code to clean data sets in a reproducible way for use in analyses, but the configuration and setup required to keep these generic enough. 
+
+However there are many good practices one can follow to start with code that can be re-useable by others that we will cover in a later workshop.  
+
+
+
+#### Example
+
+Examples of some reference code became a packages
+
+The Geneplexux project is from MSU in the Arjun Krishnan lab and is system that creates and applies machine-learning models from gene networks to predict which novel genes may be related to a geneset one is ins=terested in.  It started as a project of code that demonstrated the basis of the system (e.g. reference code).  This lab then honed the code to be more organized and logical, and while the project was not 'installable' but had instructions downloading the code, organizing the data and running the functions in Python.   They found creating an installable package made the system much easier to use for most people.   At that point they not only organized the code into a PIP-installed package, they improved and organized the code even further.   In addition it made it easier to incorporate their codebase into a website that created a graphical interface to selecting inputs and to vizualizing the outputs.   The web application could be a separate project that 'imported' the geneplexus package, rather than integrating the code. The two project (geneplexus package and geneplexus cloud-based web application) could proceed concurrently. 
+
+Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.    The project will have enough instructions to allow for 
 
 ## Implications of repository type for re-use
 
+
 ## Directory structures 
+
+<!-- thinking we may need to remove this section.  There is so much diversity here in Python and even in R.    I can't think of generic signs to ID comthis except per project type -->
+
 What to look for when using someone else's code
 
+## Documentation
+
+Can be in one of several places: 
+
+**The Readme file**.  a github innovation was to show the readme file below the code files, if one existed.   Github also renders a readme written in the [markdown] language.   This is a core feature of github featured.  However the readme file does not have to be markdown and historically had no extension and was plain text (e.g. named `README` )
+
+**Text Files**  Historical open source linux code bases had several documentation files, usually all upper-case and with an extension, and plain text for example `README` `INSTALL` `LICENSE`   Windows does not like to open this but they can be opened in a programming editor, or by right clicking and selecting "open with..." and picking TextEdit (Mac), Notepad (Windows).  
+
+**doc folder** This is the obvious place to look but may be buried in the repository.   
+
+**Binary formats** A colleague would always write his documentation using MS Word becuase he could easily format it and include screen shots as needed.  The issue is that those files are not readable on github, and they are not source code, so any changes can't be tracked, and not everyone has MS Word, or a recent version.   Even PDF while universally readable in many browsers can't be tracked.  hence most packages use some form of text to write documentation, and Markdown makes this easy.  
+
+**generated** Packages use the techinque of creating documentation by adding it directly into the code using  special format, then running a documentation generator on it.  Typically the documentation is not directly reaable from the github repository, but the software maintainer runs a utility to generate the documentation that may or may not be kept and readable in sub-folder.   A common strategy is to put specially formatted comments (e.g. lines preceeded by `#` in Python and R, or using `/* .. */` block in C) before or inside the packages functions and files.  The documentation generator reads these comments and converts them to human-readable documentation.  
+
+R packages use the [Roxygen2](https://roxygen2.r-lib.org) utility, started in 2011 (I don't know what happened to roxygen version 1), which is based on the [Doxygen](https://en.wikipedia.org/wiki/Doxygen) utility used for C & C++ software from 1997.  Roxygen2 can generate R help files, which are not in HTML or Markdown format so are not readable on github.  However there is yet another R pacakge (YARP) called PackageDown  can generate a whole website from a properly formatted package.   
+
+Python packages often use the [Sphinx](https://www.sphinx-doc.org/en/master/) system for documentation 
+
+**External websites**  given the documentation generation systems often don't output markdown, many developers opt to create documentation externally, and sometimes keep this documentation in a different github project.   For python a common place to keep documentation is the ['readthedocs'](https://docs.readthedocs.io/) service 
+
+**source code itself**  Documentation is often an after thougt of scientific programmers and so your best bet is to go directly to the code to determine what it does, and hopefully that code is written clearly with informative file, funciton, and variable names.   Even if there is good documentation, the source code is the definitive way to learn what a program is actually doing.    
+
+
 ## Dependencies/requirements
+
 
 ## Interaction of source scripts 
 (R and python)
 
-## Package vs project structures
 
 ## Finding branches in GitHub
 Where to find and look at branches in GitHub 
