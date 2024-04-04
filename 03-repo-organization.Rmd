@@ -76,14 +76,14 @@ The Geneplexux project is from MSU in the Arjun Krishnan lab and is system that 
 
 Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.    The project will have enough instructions to allow for 
 
+
+## Package vs project organization
+
+How to identify the different types and to use them in your code; what to look for when using someone else's code
+
 ## Implications of repository type for re-use
 
-
-## Directory structures 
-
-<!-- thinking we may need to remove this section.  There is so much diversity here in Python and even in R.    I can't think of generic signs to ID comthis except per project type -->
-
-What to look for when using someone else's code
+How you may still use code that can't be 'installed' as a package
 
 ## Documentation
 
@@ -108,16 +108,24 @@ Python packages often use the [Sphinx](https://www.sphinx-doc.org/en/master/) sy
 **source code itself**  Documentation is often an after thougt of scientific programmers and so your best bet is to go directly to the code to determine what it does, and hopefully that code is written clearly with informative file, funciton, and variable names.   Even if there is good documentation, the source code is the definitive way to learn what a program is actually doing.    
 
 
-## Dependencies/requirements
+## Reading and Interpreting Git Commits
 
+Reading through git commits to learn how the package has grown, who has contributed, why a commit was made. 
 
-## Interaction of source scripts 
-(R and python)
-
+the concept that git and commits are form of communication with your colleagues, the public, and yourself. 
 
 ## Finding branches in GitHub
-Where to find and look at branches in GitHub 
+
+Where to find and look at branches in GitHub, why branches may exist.  <!-- How to tell what is in a branch will come later -->
+
 
 ## Versioning and releases
 
-## Forks
+### Forks
+
+## Using someone elses code
+
+### Dependencies/requirements
+
+### Interaction of source scripts 
+
