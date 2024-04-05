@@ -6,7 +6,7 @@ Version control systems are an answer to the age-old problem of "script_v1", "sc
 
 Version control systems store all of these changes and iterations in what's called a "repository" (also known as a repo). Think of the repository as the archive that keeps track of all of the changes that you've made to your work over time. Typically a single repository is created for each unique project, program, package, etc. In the context of scientific research, a new repository is often created to store the code needed for the analyses in an individual manuscript. This way, the repository can be referenced in a publication and readers of your work can look "under-the-hood" of the methods you used. This approach increases the transparency and accuracy of research by allowing others to reproduce your results and identify and possible mistakes. 
 
-There are two main types of version control systems: centralized and distributed. The difference lies in where the repository is stored. In a centralized version control system, there is a single computer server that hosts the repository. All the people editing to the repository must have access to that server. The downside of centralized version control is that if the server crashes or gets corrupted or decides to take a vacation, your team is in big trouble. In other words, there is little redundancy in a centralized version control system. Distributed version control systems, on the other hand, allow all the contributors create a "clone" of the repository that they store on their own computer. They can make changes to this local repository and, if they want to share those changes with others, they can "push" them up to a shared repository, often stored in an online-based repository hosting system (see ["Why use Github?"](#Why-use-GitHub?) below). In this way, if the cloud based repository decides to up and explode for some unknown reason (or a known reason), there are multiple backup versions on contributor's local computers that can be used to restore the repo. 
+There are two main types of version control systems: centralized and distributed. The difference lies in where the repository is stored. In a centralized version control system, there is a single computer server that hosts the repository. All the people editing to the repository must have access to that server. The downside of centralized version control is that if the server crashes or gets corrupted or decides to take a vacation, your team is in big trouble. In other words, there is little redundancy in a centralized version control system. Distributed version control systems, on the other hand, allow all the contributors create a "clone" of the repository that they store on their own computer. They can make changes to this local repository and, if they want to share those changes with others, they can "push" them up to a shared repository, often stored in an online-based repository hosting system (see ["Why use Github?"](#Why-use-GitHub) below). In this way, if the cloud based repository decides to up and explode for some unknown reason (or a known reason), there are multiple backup versions on contributor's local computers that can be used to restore the repo. 
 
 ## Why use Git? 
 
@@ -26,13 +26,17 @@ While GitHub can require a bit of a learning curve, we believe that it is well w
 * [Bitbucket](https://bitbucket.org/product)
 
 ##  Git/GitHub workflow: 
-* Staging
-* Committing
-* Pushing
+This is an extremely simplified description of the components of a Git workflow. If you'd like to get more into the weeds, we highly recommend [Pro Git, Chapter 2.2](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository). 
+
+* ***Staging***: After you've modified a document, staging allows you to mark the file for inclusion in a future commit. If your terminal is set to the home directory of your repository, the command ````git add <filename>```` will allow you to stage changes. 
+* ***Committing***: Once a change or group of changes is staged, they can be committed to your local repository. A commit is a way to group a set of changes together under a common theme. Part of the commit is a commit message which allows you to summarize the purpose of the changes you made to the code. More on the anatomy of a good commit message later. *Note: You can pick and choose the staged files that you want to be included in each commit.* 
+* ***Pushing/Pulling***: Pushing a commit is the way to incorporate changes from your local repository up to the remote repository. Think of it as pushing your changes up from your computer into the cloud. Conversely, pulling changes is taking changes that others have made to the remote repository and pulling them down from the cloud onto your local version of the repo. 
 
 ## Branching with git
 
+You can think of branches as a kind of internal copy of your repository. When working on a branch, the files in the main repository are untouched. You can stage changes, make commits, and push/pull to remote within a branch and it won't affect the main repository. This makes branches very useful when you want to make substantial changes to your repository that you're not quite sure will work. Branches are also helpful when collaborating with others. If one person needs to run the main model, but you want to test out tweaking a few things, you can work on a branch while they stay on the main branch. Then, once your confident the changes in your branch are working correctly you can merge them from your branch back into the main repo. 
+
 ## Working with remotes 
-* Set
-* Push/pull
-* Permissions
+* Set <!--Is this separate from staging?-->
+* Push/pull <!--Possibly redundant with above?-->
+* Permissions<!--Wasn't sure how to address this one-->
