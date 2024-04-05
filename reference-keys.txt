@@ -11,7 +11,6 @@ alternatives-to-github
 gitgithub-workflow
 branching-with-git
 working-with-remotes
-glossary
 repo-organization
 types-of-repositories
 implications-of-repository-type-for-re-use
