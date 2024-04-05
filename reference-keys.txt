@@ -46,3 +46,4 @@ benefits
 github-workflows
 exercise
 instructions
+glossary
