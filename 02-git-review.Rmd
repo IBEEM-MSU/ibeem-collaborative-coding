@@ -24,5 +24,3 @@ What is it in the context of Git and how did GitHub usher in the golden age of s
 * Set
 * Push/pull
 * Permissions
-
-## Glossary 
