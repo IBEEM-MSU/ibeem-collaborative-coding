@@ -1,17 +1,29 @@
 # Review: Principles of Git {#git-review}
 
 ## Distributed version control
-What is "distributed version control" and how to did Git lay the foundation for the golden age of software development? 
+
+Version control systems are an answer to the age-old problem of "script_v1", "script_submitted_to_Science", "script_final", "script_finaler", and "script_final_i_swear_this_is_the_last_one" that tend to clog up and confuse storage space on all of our computers. By tracking changes in a document (in this context, usually a coded script), version control systems allow you to keep a record of all the changes that you have made without having to re-save new documents every time. Version control systems also allow for multiple users to make changes to the same document and keep track of the who-did-what side of things. 
+
+Version control systems store all of these changes and iterations in what's called a "repository" (also known as a repo). Think of the repository as the archive that keeps track of all of the changes that you've made to your work over time. Typically a single repository is created for each unique project, program, package, etc. In the context of scientific research, a new repository is often created to store the code needed for the analyses in an individual manuscript. This way, the repository can be referenced in a publication and readers of your work can look "under-the-hood" of the methods you used. This approach increases the transparency and accuracy of research by allowing others to reproduce your results and identify and possible mistakes. 
+
+There are two main types of version control systems: centralized and distributed. The difference lies in where the repository is stored. In a centralized version control system, there is a single computer server that hosts the repository. All the people editing to the repository must have access to that server. The downside of centralized version control is that if the server crashes or gets corrupted or decides to take a vacation, your team is in big trouble. In other words, there is little redundancy in a centralized version control system. Distributed version control systems, on the other hand, allow all the contributors create a "clone" of the repository that they store on their own computer. They can make changes to this local repository and, if they want to share those changes with others, they can "push" them up to a shared repository, often stored in an online-based repository hosting system (see ["Why use Github?"](#Why-use-GitHub?) below). In this way, if the cloud based repository decides to up and explode for some unknown reason (or a known reason), there are multiple backup versions on contributor's local computers that can be used to restore the repo. 
 
 ## Why use Git? 
 
-## Why use GitHub?  
-What is it in the context of Git and how did GitHub usher in the golden age of software development? 
+Coding has become a nearly ubiquitous part of scientific research, with scientists developing increasingly complex analyses requiring extensive data wrangling and post-analysis processing and visualization steps. The development of the code needed to run these analyses often goes through many iterations during the initial development process through to the final stages of peer review. Using a distributed version control system like Git can help researchers to code collaboratively, manage and organize different versions of the same analysis, and serve as an archive of the methods used to process and analyze research data. These advantages help to support researchers in the pursuit of "[open science](https://www.cos.io/open-science)" by increasing transparency while also serving as a useful record that can be referred back to and reproduced in the future. 
 
-## Alternatives to github 
+## Why use GitHub?  
+
+GitHub is an online-based repository hosting system for Git repositories. It's worth noting that GitHub is not the only hosting system for Git repositories (see Alternatives below), however it is the most popular system and is nearly ubiquitous in the sciences. 
+
+Additionally, GitHub has many useful features that expand upon Git and facilitate communication and collaboration amongst large groups of coders.GitHub "Issues" are one such feature that allow users to identify problems or ways to improve a set of code, to assign responsibility for the tasks needed to address them, and to keep track of the changes in the code that were made. Additionally, GitHub has features that allow for content generation, including static websites (like this one!) created using [GitHub Pages](https://pages.github.com/).  
+
+While GitHub can require a bit of a learning curve, we believe that it is well worth the effort and, in the long run, will save researchers a lot of time on trouble-shooting, reproducing results, and sharing analysis. 
+
+## Alternatives to GitHub
+
 * [GitLab](https://about.gitlab.com/)
 * [Bitbucket](https://bitbucket.org/product)
-* rol your own
 
 ##  Git/GitHub workflow: 
 * Staging
