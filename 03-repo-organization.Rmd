@@ -20,13 +20,13 @@ In this book we may use the terms "repository", "project", or "code-base" interc
 
 ## Why read the source code?
 
-First, why would we be a github tourist in the first place? Let set out a few reasons you may examine or use another project's code (either via github or from some other site):
+First, why would one want to be a github tourist in the first place? Let set out a few reasons you may examine or use another project's code (either via github or from some other site):
 
 - track down a problem you are having by understanding how the code is working or has changed;
 - use the code to perform a function you need, either in whole or in part;
 - for better understanding of how to program: see how others have written and organized code, programming structures, or files in a project. 
 
-In the old days of open source programming, a phrase used to track down a problem with a system was "use the source, Luke." 
+An old phrase in open source programming to describe how to track down a problems or understand how a program works is"use the source, Luke!" 
 
 Are there other reasons? 
  
@@ -37,7 +37,7 @@ There are many ways to categorize software but, from the perspective of open sci
 There are many other ways to categorize software (language, function, outputs, domain, style, etc etc), seeing code bases in these categories these may help you understand what kind of code base you are developing and thus organize your files and code.   
 
 
-### Library/Package Project (installable)
+### Package (installable)
 
 These are the free and open packages we install for R, Python, Julia, Java, Rust, etc etc.  These could also be stand-alone programs written in any language, for example we use the GDAL system 
 
@@ -60,9 +60,9 @@ Another example of a 'project' repositories are specific-purpose web application
 
 ### Reference (readable) 
 
-There are many reason why code is published for transparent reference rather than to be re-useable.  For one, the programming effort is significant to create code that's useable by others.   Many of our research or academic code is useless with out the input data, and those data sets are frequently no able to be published if they are acquired from a private source.   
+There are many reason why code is published for transparent reference rather than to be re-useable.  For one, the programming effort to create code that's usable by others  is significant, which can delay or even hinder simpling getting a computational analysis completed.   Second, many of our research or academic code is useless with out the input data, and those data sets are frequently no able to be published if they are acquired from a private source.   
 
-Many projects use code to clean data sets in a reproducible way for use in analyses, but the configuration and setup required to keep these generic enough. 
+Many projects use code to clean data sets in a reproducible way for use in analyses, but the configuration and setup required to keep these generic takes more time than available.    
 
 However there are many good practices one can follow to start with code that can be re-useable by others that we will cover in a later workshop.  
 
@@ -87,9 +87,11 @@ How you may still use code that can't be 'installed' as a package
 
 ## Documentation
 
+<!-- note this replaces what is currently chapter 5 -->
+
 Can be in one of several places: 
 
-**The Readme file**.  a github innovation was to show the readme file below the code files, if one existed.   Github also renders a readme written in the [markdown] language.   This is a core feature of github featured.  However the readme file does not have to be markdown and historically had no extension and was plain text (e.g. named `README` )
+**The Readme file**.  While having a file named README is a longstanding tradition in source code, Github's innovation was to show the readme file below the code files, and to use markdown formatting to render a nice looking readme.  Now this is a core feature of github for many .  However the readme file does not have to be markdown and historically had no extension and was plain text (e.g. named `README` )
 
 **Text Files**  Historical open source linux code bases had several documentation files, usually all upper-case and with an extension, and plain text for example `README` `INSTALL` `LICENSE`   Windows does not like to open this but they can be opened in a programming editor, or by right clicking and selecting "open with..." and picking TextEdit (Mac), Notepad (Windows).  
 
