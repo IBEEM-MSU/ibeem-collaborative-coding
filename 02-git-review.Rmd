@@ -21,6 +21,8 @@ knitr::include_graphics("./figures/CentralizedVsDistributedVC.png")
 
 Coding has become a nearly ubiquitous part of scientific research, with scientists developing increasingly complex analyses requiring extensive data wrangling and post-analysis processing and visualization steps. The development of the code needed to run these analyses often goes through many iterations during the initial development process through to the final stages of peer review. Using a distributed version control system like Git can help researchers to code collaboratively, manage and organize different versions of the same analysis, and serve as an archive of the methods used to process and analyze research data. These advantages help to support researchers in the pursuit of "[open science](https://www.cos.io/open-science)" by increasing transparency while also serving as a useful record that can be referred back to and reproduced in the future. 
 
+If you're looking for more information on Git, check out [Happy Git and GitHub for the useR](https://happygitwithr.com/big-picture).
+
 ## Why use GitHub?  
 
 ```{r github, echo=FALSE, out.width= "35%", out.extra='style="float:right; padding:10px"'} 
