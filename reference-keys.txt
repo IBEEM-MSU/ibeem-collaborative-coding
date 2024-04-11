@@ -1,3 +1,6 @@
+fig:workflow2
+fig:vc
+fig:fork
 intro
 abstract
 learning-objectives
@@ -10,7 +13,7 @@ why-use-github
 alternatives-to-github
 gitgithub-workflow
 branching-with-git
-working-with-remotes
+collaborative-coding-forking-and-pull-requests
 repo-organization
 types-of-repositories
 implications-of-repository-type-for-re-use
