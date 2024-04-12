@@ -50,3 +50,16 @@ github-workflows
 exercise
 instructions
 glossary
+branch
+commit
+commit-hash
+changeset
+git-flow
+git-log-graph
+github-flavored-markdown-gfm
+issue
+markdown
+pull-request-pr
+repository-repo
+remote
+squashed-commits
