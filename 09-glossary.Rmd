@@ -1,1 +1,43 @@
 # Glossary {#glossary}
+
+### **Branch**: 
+An independent development stream within a repository where you can develop new features independently without the fear of interrupting others' workflows. See [this book chapter](https://happygitwithr.com/git-branches) for more info. 
+
+### **Commit**: 
+A labelled set of changes to the code. A single commit an include changes to one or multiple files.  
+
+### **Commit hash**: 
+A nickname for the 40 character git commit SHA-1 checksum value which represents a unique ID given to each commit in a git repo. Commit hashes are also often presented in their shortened 8-character form. 
+
+### **Changeset**: 
+Another name for the set of changes in a particular commit. 
+
+### **Git flow**: 
+A strategy for organizing branches within a repository. Typically includes 5 branch types: Main, Develop, Feature, Release, and Hotfix. See [this nice cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/) or [this explanation](https://www.gitkraken.com/learn/git/git-flow) for more info. 
+
+### **Git log graph**: 
+Also called a source tree or "graph", git log graphs are a visual representation of the structure of a repository (e.g., branches and commits) generated using the commits `git log --graph`. A lot of software also has built-in git log graphs.
+
+### **GitHub flavored-markdown (GFM)**: 
+GitHub's version of the markdown syntax, which contains some additional functionality. See [this great overview](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub's Documentation for more info. 
+
+### **Issue**: 
+A feature of GitHub that allows users to identify problems/bugs, keep track of tasks, receive feedback on changes, etc. See [GitHub's documentation section on Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) for more details. 
+
+### **Markdown**: 
+A text-encoding system that allows you to format plain text and make it fancy (e.g., bold, italics). Markdown file extensions are ".md". The text of this book is written in markdown - if you want to check out some of the .rmd files (short for R Markdown), follow [this link](https://github.com/IBEEM-MSU/ibeem-collaborative-coding). 
+
+### **Pull request (PR)**: 
+A way to "request" that the maintainers of a repository (sometimes you or sometimes somebody else) "pull" a set of changes that you've proposed into another branch. Pull requests can be used to merge changes from one branch to another within a single repository (see [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for more details) or between a forked version of a repository (e.g., one that you don't have write access to) and a branch in the original repository (see [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) for more info). 
+
+### **Repository (Repo)**:
+A collection of files that Git keeps track of. 
+
+### **Remote**: 
+The copy of the repository that is hosted on the internet or another serve (i.e., not the "local" version on your computer). 
+
+### **Squashed commits**: 
+A way to effectively combine multiple previous commits into one new commit. (Note: technically the previous commits are not deleted, but for all intents and purposes you've now "squashed" them into one new commit.) Squashed commits can be very helpful when working on a branch that you want to then pull request to merge back into another branch.   
+
+
+<!-- ### **Sub-repo**: Is this the same as a submodule? And if so, could you give me an example of how this might be relevant to an attendee?  --> 
