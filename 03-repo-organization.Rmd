@@ -1,10 +1,10 @@
-# Anatomy of a GitHub repository {#repo-organization}
-
+# Git/Github Orientation
 This chapter will provide orientation to open science code repositories, via github, so you can find and use code that may be useful to you. 
 
 We learned to organize and work through our own projects by observing how others organize theirs.  The amazing thing is that you can find hundreds of excellent examples to learn from as even major companies put their code on github.   
 
-<!-- note: maybe move this to chapter 2 -->
+
+## What is a code-base? 
 
 In this book we may use the terms "repository", "project", or "code-base" interchangeably but they have slightly different meanings: 
 
@@ -16,7 +16,55 @@ In this book we may use the terms "repository", "project", or "code-base" interc
 
 - We may think of projects as code base plus associated data files, and all of the work needed to complete the research.  However, git hub uses "project" to mean "project management features" (task tracking, due dates, work progress monitoring) which can be used for one or more repos.   A research project may require multiple repos (one for data entry & cleaning, one for analysis, and one for a website to show it all off) and a git hub project can tie those together.  This is a new feature that we won't go into much but we will go into the existing project management features that github has for repos (issue tracking)
 
-<!-- end block to move -->
+
+## Git vs. Github
+
+There is frequent confusion between which aspect of using git  github for code mamagement is from git vs. github.  The following table attempts to 
+
+| Features of Git | Features of Github Service |
+| --- | ---|
+|  git does not have way to track problems and to-do items| **issue tracking** and other project management features are not connected to git, but github helps to integration project management with git |
+| **commit**: <br />track code changes and add a message describing this change (see [reading commits](#reading_commits) )                        | collaborators can add comments on commits beyond the commit<br />github issues can be cross-referenced in commit messages |
+| **diff**: show the difference in two change sets, <br />can use command line, programming editor (Rstudio, VSCode, Eclipse, etc), or a specialized desktop application (MergeTool from Apple) | comments directly in code changes per line and create/share perma-links per line for feeback from collaborators |
+| **branch**: git tracks these code versions for you and can provide lists using `git status`, `git branch -a` etc<br />many programing editors have a feature to visualize the tree/graph of branches | github allows you to easily show and switch between branches to compare without having to 'checkout' in your current directory.  and initiate a merge from there |
+| **merge**: combine changes from one branch to another using several different methods, alert when there are conflicts and resolve conflicts.    Can add a merge commit message to communicate | "**pull request**" system to facilitate external collaboration.  Extensive ability to comment, review, and connect to the issue tracking system.  A "pull request" is a github invention and This is the core feature of github |
+| **Fork**: simply copy of | Forking is a feature in github |
+
+
+
+## Reading and Interpreting Git Commits like an Historian {#reading_commits}
+
+Reading through git commits to learn how the package has grown, who has contributed, why a commit was made. 
+
+the concept that git and commits are form of communication with your colleagues, the public, and yourself. 
+
+### How people communicate using commit messages
+Perspective of commit messages as communication can change what you include in a commit (independent of github)
+
+
+### Review commits
+
+git is much more than just a backup system, or a way to keep track of things.  it's a means to communicate about code, and the heart of this is the commit. 
+
+#### Viewing commits and diffs using github
+
+ - the user interface (walk through with an example)
+ - A good message succintly says what was changed and why 
+ - linking with issues
+
+A good commit is focused on solving a single problem or making a change that helps to implementing a small feature.   This way it's very clear was code was changed or added and why.    Viewing other devs commit log help you to understand how to use git more effectively when essentially less is more.   A commit is not a way to 'backup' yuor code.   There are other ways to do that.   A commit that says "nightly commit" tells me nothing about why the code was changed.   A commit should include all the changes necessary to solve a small issue, and the commit should work after it's done. 
+
+Since I often make mistakes, I often thing a change is complete and commit my code, only to find a typo or other problem I missed.  It's possible to 'squash' commits into a single commit (the details will be discussed in a later workshop).  You may see commits that encompass many changes and seem perfects - they may actually be several commits that were 'squashed.`   
+
+## Finding branches in GitHub
+
+Where to find and look at branches in GitHub, why branches may exist.  <!-- How to tell what is in a branch will come later -->
+
+#  Anatomy of a code repository {#repo-organization}
+<!-- move to a new chapter -->
+
+we've learn about git and github, which is how to work and communicate changes in code, but what about the code itself?   This section may help you decipher the files and folders in a code base to make use of it, regardless of where it may be.  However github makes it very easy to navigate code, and is integral to communicate what the code is for. 
+
 
 ## Why read the source code?
 
@@ -24,20 +72,29 @@ First, why would one want to be a github tourist in the first place? Let set out
 
 - track down a problem you are having by understanding how the code is working or has changed;
 - use the code to perform a function you need, either in whole or in part;
-- for better understanding of how to program: see how others have written and organized code, programming structures, or files in a project. 
+- to learn by seeing how others have written and organized code, programming structures, or files in a project. 
+- to change it, adding a feature or improve in some otherw ay 
 
-An old phrase in open source programming to describe how to track down a problems or understand how a program works is"use the source, Luke!" 
+An old phrase in open source programming to describe how to track down a problems or understand how a program works is "use the source, Luke!" 
 
+There are dozens of blog posts explaining why reading source code is valuable. But you may be here to 
 Are there other reasons? 
- 
-## Types of repositories
+
+Resources:
+
+-  ["Reading Code Is an Important Skill. Here’s Why. "](https://builtin.com/software-engineering-perspectives/reading-code) by Tammy Xu, builtin.com
+
+  
+# Understanding different types of code bases
 
 There are many ways to categorize software but, from the perspective of open science, let's consider the axis of how we use the software.  We find that there are (at least) three identifiable categories of code bases in terms of how you would use the code and maybe interact with the code base. 
 
 There are many other ways to categorize software (language, function, outputs, domain, style, etc etc), seeing code bases in these categories these may help you understand what kind of code base you are developing and thus organize your files and code.   
 
+Note that the organizational principles and conventions we described are independent of whether a code base is  a 'repository' (managed by git), or pushed to github.   We use github to discover, explore and use code but it could be anywhere, or even emailed to you as a zip full of files and folders.   
 
-### Package (installable)
+
+## Package Codebase (installable)
 
 These are the free and open packages we install for R, Python, Julia, Java, Rust, etc etc.  These could also be stand-alone programs written in any language, for example we use the GDAL system 
 
@@ -49,7 +106,7 @@ As a user of such a package, you don't need to access the code via github - you 
 All of us use package Creating an R package 
 
 
-### Project (useable) 
+### Project Codebase (useable) 
 
 These codebases may not be installable projects, but are intended to be re-used by someone else, and that is often your future self!   Many of these include instructions for clone the code, getting all the piece you need installed, and using the program.  
 
@@ -58,7 +115,7 @@ An example of this is https://github.com/billspat/hpcc_megadetector which was cr
 Another example of a 'project' repositories are specific-purpose web applications.   If your goal is to create a web application to help others use your software (rather than write a desktop application or leave it as command line only) then starting with an existing 
 
 
-### Reference (readable) 
+### Reference Codebase (readable) 
 
 There are many reason why code is published for transparent reference rather than to be re-useable.  For one, the programming effort to create code that's usable by others  is significant, which can delay or even hinder simpling getting a computational analysis completed.   Second, many of our research or academic code is useless with out the input data, and those data sets are frequently no able to be published if they are acquired from a private source.   
 
@@ -67,31 +124,34 @@ Many projects use code to clean data sets in a reproducible way for use in analy
 However there are many good practices one can follow to start with code that can be re-useable by others that we will cover in a later workshop.  
 
 
+## Examples by Codebase Types
 
-#### Example
+### Reference: 
 
-Examples of some reference code became a packages
+Here is a codebase in 'assembly language' that controlled vehicles for space travel:  [Source Code for the Apollo 11 Mission](https://github.com/chrislgarry/Apollo-11)
+
+This is clearly for reference!  There are no computers on which this could run (unless someone creates a vitual simulator of the Apollo command module that can run) 
+
+
+***Examples of some reference code became a packages**
 
 The Geneplexux project is from MSU in the Arjun Krishnan lab and is system that creates and applies machine-learning models from gene networks to predict which novel genes may be related to a geneset one is ins=terested in.  It started as a project of code that demonstrated the basis of the system (e.g. reference code).  This lab then honed the code to be more organized and logical, and while the project was not 'installable' but had instructions downloading the code, organizing the data and running the functions in Python.   They found creating an installable package made the system much easier to use for most people.   At that point they not only organized the code into a PIP-installed package, they improved and organized the code even further.   In addition it made it easier to incorporate their codebase into a website that created a graphical interface to selecting inputs and to vizualizing the outputs.   The web application could be a separate project that 'imported' the geneplexus package, rather than integrating the code. The two project (geneplexus package and geneplexus cloud-based web application) could proceed concurrently. 
 
-Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.    The project will have enough instructions to allow for 
+Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.  The project will have enough instructions to allow for 
 
 
-## Package vs project organization
-
-How to identify the different types and to use them in your code; what to look for when using someone else's code
 
 ## Implications of repository type for re-use
 
 How you may still use code that can't be 'installed' as a package
 
-## Documentation
+# Finding and Using Documentation
 
 <!-- note this replaces what is currently chapter 5 -->
 
-Can be in one of several places: 
+## Important elements to look out for:
 
-**The Readme file**.  While having a file named README is a longstanding tradition in source code, Github's innovation was to show the readme file below the code files, and to use markdown formatting to render a nice looking readme.  Now this is a core feature of github for many .  However the readme file does not have to be markdown and historically had no extension and was plain text (e.g. named `README` )
+**The README file**.  While having a file named README is a longstanding tradition in source code, Github's innovation was to show the readme file below the code files, and to use markdown formatting to render a nice looking readme.  Now this is a core feature of github for many .  However the readme file does not have to be markdown and historically had no extension and was plain text (e.g. named `README` )
 
 **Text Files**  Historical open source linux code bases had several documentation files, usually all upper-case and with an extension, and plain text for example `README` `INSTALL` `LICENSE`   Windows does not like to open this but they can be opened in a programming editor, or by right clicking and selecting "open with..." and picking TextEdit (Mac), Notepad (Windows).  
 
@@ -107,19 +167,28 @@ Python packages often use the [Sphinx](https://www.sphinx-doc.org/en/master/) sy
 
 **External websites**  given the documentation generation systems often don't output markdown, many developers opt to create documentation externally, and sometimes keep this documentation in a different github project.   For python a common place to keep documentation is the ['readthedocs'](https://docs.readthedocs.io/) service 
 
-**source code itself**  Documentation is often an after thougt of scientific programmers and so your best bet is to go directly to the code to determine what it does, and hopefully that code is written clearly with informative file, funciton, and variable names.   Even if there is good documentation, the source code is the definitive way to learn what a program is actually doing.    
+## Code as documentation
 
+We hope we've already convinced you that reading source code is a good idea.   Documentation is often an after thought of scientific programmers and so your best bet is to go directly to the code to determine what it does, and hopefully that code is written clearly with informative file, funciton, and variable names.   Even if there is good documentation, the source code is the definitive way to learn what a program is actually doing.   
 
-## Reading and Interpreting Git Commits
+Like reading human language for understanding and interpretation, reading source code is a learned skill.  In both cases you get better as you see more examples and understand the contexts and cultures embedded in the symbols.   [This article](https://coderscat.com/learn-from-source-code/) from 'coderscat.com' has some great pointers for that. 
 
-Reading through git commits to learn how the package has grown, who has contributed, why a commit was made. 
+Common advice given to help understand a code base is to run it yourself.   This largely depends on the type of code (see the section on project types).  
 
-the concept that git and commits are form of communication with your colleagues, the public, and yourself. 
+### Code tests as are a great source of insight
 
-## Finding branches in GitHub
+We don't cover writing test code in this workshop, but you may have heard about it.  In short, in a successful code project someone will have written a set of short functions that check if the result from running the code matches what you'd expect.    They are often run before you merge or push to a repository to esure everything is working as expected.  
 
-Where to find and look at branches in GitHub, why branches may exist.  <!-- How to tell what is in a branch will come later -->
+You don't have to know how to write these tests to be able to read and learn from them.   Most tests are in a "tests" or "test" folder.    If you look to see the commands leading up to a test you can learn how the author of the code base expects the code to be used.  
 
+### Other items documentation how to work with the code
+
+You may see the other following files in a repository.   Often the files are names with all caps and no extension, especially if the project has some  Unix/Linux provenance (as do many open source and research software projects).   On some systems (including github), upper case sorts before lower case, and so these files show at the top of a file listing since they are meant to be read before using the software.  
+ 
+ - `LICENSE`  see the chapter on licencsing here.  This documents under what conditions you may use thse software and pull from or change the code
+ - 'CONTRIBUTING` good open source projects have instructions and guidelines for contributing to a project.  This is very valuable for your own projects as they are instructions for your colleagues who may contribute code, or to your future self when you forget how you get everything setup!  
+ - 'man' directory this is short for 'manual' and comes from Unix/Linux system called 'man pages' which I guess is for the manual as a collection of help files. 
+  
 
 ## Versioning and releases
 
@@ -130,4 +199,83 @@ Where to find and look at branches in GitHub, why branches may exist.  <!-- How 
 ### Dependencies/requirements
 
 ### Interaction of source scripts 
+
+# Collaboration (ch 4)
+
+# Collaborating with GitHub {#collaborating}
+
+
+
+<!-- keep this in ch. 4 -->
+
+## Project management with GitHub
+Using Github's project management lite features
+
+## Issue management
+What is issue management? 
+Following issues and their fixes can help you track down your bugs 
+
+### Pandas Example: 
+* [My commit](https://github.com/krishnanlab/geneplexus_app/commit/80256c10d65f22fdd63898225948e36d4d63d29b)  
+* [Found someone else that had the same problem](https://github.com/pandas-dev/pandas/issues/8206) 
+* [Found this in the source-code for the documentation](https://github.com/pandas-dev/pandas/blob/bdc79c146c2e32f2cab629be240f01658cfb6cc2/pandas/core/generic.py#L3888)
+* [This is mentioned in the release notes for verion 1.5.0](https://pandas.pydata.org/pandas-docs/version/1.5/whatsnew/v1.5.0.html#other-deprecations)
+  + The release notes have a link to the issue(s) for every change, including this one GH9568 , which spells out why the change was made.
+* Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   
+
+
+## Communication using issues 
+
+### Requesting help/features or reporting bugs (using reprexes).  
+
+### Example: How ask package maintainers to accommodate the global dateline and very high latitudes 
+* https://github.com/rstudio/leaflet/issues/495
+  + This is a great example of an obtuse issue.  There is an R package "MapView" this is a 1-stop-mapping thing, super easy.  Someone there raised an issue.   MapView depends on RLeaflet (I just know this, it doesn't say that anywhere in the issue).  The leader of the MapView project realized that it was an RLeaflet problem, so copy/pasted the issue into the RLeaflet project.  I say RLeaflet because that project actually heavily depends on the original leaflet.js for javascript, which most people just called "leaflet". Another interesting thing is that the first commenter (Darcy somebody) says that polygons are fine, which does not need to be said because the OP already said it was ok, but no one piled on and said "he already said that." Note the issue was raised in 2015 and no one was assigned and it was not fixed.   The issue was reference in 2018 for new issue (created by Rstudio) to fix it, and I only know that because in the new issue they referenced the issue number.    but even that one was not fixed.   also in the original issue is an extensive post to show a work-around.  That info now just =sits here in a github issue.    A question for the group: what should have been done by the project to deal with this issue (hints, create an issue to add the work-around in the documentation, when creating a new issue, close the original and reference the new one..  possibly tag it as "wontfix" or better tag it in a project roadmap to make it clear they care about it and will deal with at some future time.
+* https://github.com/rstudio/leaflet/issues/225
+
+### Example: ggmap package
+Issue with Pacific mapping with ggmap: https://github.com/dkahle/ggmap/issues/326 
+* (solution is to change the projection, the software is not the problem, but is it in the docs?)
+* Another person had a question/problem but it was totally ignored: https://github.com/dkahle/ggmap/issues/295  
+  + Why is that?  
+  + Is there a document for this package describing how to participate in the community?  
+  + Are the volunteers following the lead of the owner?
+  + Who is fine ignoring these?
+
+<!-- create a new chapter for this topic -->
+
+# Engaging with the community 
+
+Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
+
+
+<!-- move this to to Ch. 3 Tour of Github -->
+
+## What is a 'pull request?' (PR) (hint: it's a github thing)
+* A PR lifecycle: 
+  + Issue
+  + Fork/Branch
+  + PR
+  + Merge
+
+## Github link awesomeness
+* Permalinks in code and issues
+* References to issues from commits and referencing to commits from comments
+
+
+
+
+you can say "here is problem" or you can ask "is this a problem?"  but a PR instead changes  the conversatin to  "is this a solution?" which is more efficient
+
+
+
+in excercise, give them several things to be 1) making branch and editing 2) creating PR 3) forking 4) adding a comment ot the code, issue or merge request
+
+
+
+
+
+
+
+
 
