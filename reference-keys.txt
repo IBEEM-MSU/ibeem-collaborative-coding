@@ -63,3 +63,7 @@ pull-request-pr
 repository-repo
 remote
 squashed-commits
+resources
+data-wrangling
+data-processing
+gitgithub-and-version-control
