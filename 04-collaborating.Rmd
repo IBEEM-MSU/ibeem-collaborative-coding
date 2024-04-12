@@ -1,4 +1,6 @@
-# Collaborating with GitHub {#collaborating}
+# Collaborating with GitHub
+
+**NOTE this is mostly moved into chapter 3 file for now**
 
 <!-- move this to Chapter 3 -->
 ## Understanding commits 
