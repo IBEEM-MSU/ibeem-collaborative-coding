@@ -1,4 +1,4 @@
-# Git/Github Orientation
+# Github Orientation
 This chapter will provide orientation to open science code repositories, via github, so you can find and use code that may be useful to you. 
 
 We learned to organize and work through our own projects by observing how others organize theirs.  The amazing thing is that you can find hundreds of excellent examples to learn from as even major companies put their code on github.   
@@ -19,20 +19,42 @@ In this book we may use the terms "repository", "project", or "code-base" interc
 
 ## Git vs. Github
 
-There is frequent confusion between which aspect of using git  github for code mamagement is from git vs. github.  The following table attempts to 
+There is frequent confusion between which aspect of using git  github for code mamagement is from git vs. github.  The following table attempts to clarify which concept and feature are part of the git system and can be used independently from github.    Github is the most widely used 'remote' git server as it offers great collaboration features.  
 
-| Features of Git | Features of Github Service |
+| Feature originally of Git | Feature of Github Service |
 | --- | ---|
 |  git does not have way to track problems and to-do items| **issue tracking** and other project management features are not connected to git, but github helps to integration project management with git |
 | **commit**: <br />track code changes and add a message describing this change (see [reading commits](#reading_commits) )                        | collaborators can add comments on commits beyond the commit<br />github issues can be cross-referenced in commit messages |
 | **diff**: show the difference in two change sets, <br />can use command line, programming editor (Rstudio, VSCode, Eclipse, etc), or a specialized desktop application (MergeTool from Apple) | comments directly in code changes per line and create/share perma-links per line for feeback from collaborators |
 | **branch**: git tracks these code versions for you and can provide lists using `git status`, `git branch -a` etc<br />many programing editors have a feature to visualize the tree/graph of branches | github allows you to easily show and switch between branches to compare without having to 'checkout' in your current directory.  and initiate a merge from there |
-| **merge**: combine changes from one branch to another using several different methods, alert when there are conflicts and resolve conflicts.    Can add a merge commit message to communicate | "**pull request**" system to facilitate external collaboration.  Extensive ability to comment, review, and connect to the issue tracking system.  A "pull request" is a github invention and This is the core feature of github |
-| **Fork**: simply copy of | Forking is a feature in github |
+| **merge**: combine changes from one branch to another using several different methods, alert when there are conflicts and resolve conflicts.    Can add a merge commit message to communicate | github has an interface for merging directly on the website to help you preview what will happen without affecting your local repository, or the main branch |
+| **Fork**: simply copy of a repository that someone has decided to work on independently.    In git, the repo that you forked from is called the 'upstream' repository. | Github has a button to fork a repository into your own account, and keeps track of where that fork comes from, and which github also called the 'upstream' repository. |
+| **remote/clone/push/pull**: git has the concept of remote repository running on a server that you can clone (download), push up changes, pull down others changes into your code.  The word 'origin' is a git convention. | Github is a remote server and provides the URL to you to be able to clone, push or pull. |
+|  | "**pull request**" is a sytem invented by github system to facilitate external collaboration.  Extensive ability to comment, review, and connect to the issue tracking system.  This perhaps is the core feature of github.  Note that other git servers use different terms, for example git servers at gitlab.com calls them '*merge requests*' |
 
 
+
+## Git Features in github
+
+This workshop assumes you've been trained in git, but perhaps not github.   Github makes most of the features of git very easy to find, and here are links to github's help for each of them: 
+
+<!-- code note: attempting to use bookdown image sizing features here https://bookdown.org/yihui/rmarkdown-cookbook/figure-size.html --> 
+
+- [Remote URL, Cloning](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)<br>
+![github ui for cloning](https://docs.github.com/assets/cb-69468/mw-1440/images/help/repository/https-url-clone-cli.webp){width=50%}
+
+- [Branching](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)<br>
+  ![image of branch UI in github](https://docs.github.com/assets/cb-36155/mw-1440/images/help/repository/file-tree-view-branch-dropdown-expanded.webp){width=50%}
+
+- [Commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) <br/>
+  ![github ui for viewing commits](https://docs.github.com/assets/cb-48474/mw-1440/images/help/commits/commits-page.webp){width=50%}
+  
 
 ## Reading and Interpreting Git Commits like an Historian {#reading_commits}
+
+Resources
+- [Github's git guide to commits](https://github.com/git-guides/git-commit)
+
 
 Reading through git commits to learn how the package has grown, who has contributed, why a commit was made. 
 
@@ -56,12 +78,10 @@ A good commit is focused on solving a single problem or making a change that hel
 
 Since I often make mistakes, I often thing a change is complete and commit my code, only to find a typo or other problem I missed.  It's possible to 'squash' commits into a single commit (the details will be discussed in a later workshop).  You may see commits that encompass many changes and seem perfects - they may actually be several commits that were 'squashed.`   
 
-## Finding branches in GitHub
-
-Where to find and look at branches in GitHub, why branches may exist.  <!-- How to tell what is in a branch will come later -->
+​	
 
 #  Anatomy of a code repository {#repo-organization}
-<!-- move to a new chapter -->
+<!-- move to a new chapter? -->
 
 we've learn about git and github, which is how to work and communicate changes in code, but what about the code itself?   This section may help you decipher the files and folders in a code base to make use of it, regardless of where it may be.  However github makes it very easy to navigate code, and is integral to communicate what the code is for. 
 
@@ -84,8 +104,8 @@ Resources:
 
 -  ["Reading Code Is an Important Skill. Here’s Why. "](https://builtin.com/software-engineering-perspectives/reading-code) by Tammy Xu, builtin.com
 
-  
-# Understanding different types of code bases
+
+## Understanding different types of code bases
 
 There are many ways to categorize software but, from the perspective of open science, let's consider the axis of how we use the software.  We find that there are (at least) three identifiable categories of code bases in terms of how you would use the code and maybe interact with the code base. 
 
@@ -94,7 +114,7 @@ There are many other ways to categorize software (language, function, outputs, d
 Note that the organizational principles and conventions we described are independent of whether a code base is  a 'repository' (managed by git), or pushed to github.   We use github to discover, explore and use code but it could be anywhere, or even emailed to you as a zip full of files and folders.   
 
 
-## Package Codebase (installable)
+### Package Codebase (installable)
 
 These are the free and open packages we install for R, Python, Julia, Java, Rust, etc etc.  These could also be stand-alone programs written in any language, for example we use the GDAL system 
 
@@ -184,11 +204,11 @@ You don't have to know how to write these tests to be able to read and learn fro
 ### Other items documentation how to work with the code
 
 You may see the other following files in a repository.   Often the files are names with all caps and no extension, especially if the project has some  Unix/Linux provenance (as do many open source and research software projects).   On some systems (including github), upper case sorts before lower case, and so these files show at the top of a file listing since they are meant to be read before using the software.  
- 
+
  - `LICENSE`  see the chapter on licencsing here.  This documents under what conditions you may use thse software and pull from or change the code
  - 'CONTRIBUTING` good open source projects have instructions and guidelines for contributing to a project.  This is very valuable for your own projects as they are instructions for your colleagues who may contribute code, or to your future self when you forget how you get everything setup!  
  - 'man' directory this is short for 'manual' and comes from Unix/Linux system called 'man pages' which I guess is for the manual as a collection of help files. 
-  
+
 
 ## Versioning and releases
 
