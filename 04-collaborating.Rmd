@@ -1,10 +1,13 @@
 # Collaborating with GitHub {#collaborating}
 
+<!-- move this to Chapter 3 -->
 ## Understanding commits 
 
 ### How people communicate using commit messages
 Perspective of commit messages as communication can change what you include in a commit (independent of github)
 
+
+<!-- keep this in ch. 4 -->
 
 ## Project management with GitHub
 Using Github's project management lite features
@@ -40,11 +43,16 @@ Issue with Pacific mapping with ggmap: https://github.com/dkahle/ggmap/issues/32
   + Are the volunteers following the lead of the owner?
   + Who is fine ignoring these?
 
-## Engaging with the community 
+<!-- create a new chapter for this topic -->
+
+# Engaging with the community 
 
 Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
 
-### What is a 'pull request?' (PR) (hint: it's a github thing)
+
+<!-- move this to to Ch. 3 Tour of Github -->
+
+## What is a 'pull request?' (PR) (hint: it's a github thing)
 * A PR lifecycle: 
   + Issue
   + Fork/Branch
