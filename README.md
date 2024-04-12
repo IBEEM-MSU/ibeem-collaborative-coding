@@ -8,7 +8,7 @@ These are the source files for the materials, to see the materials, go to the re
 
 ### Development
 
-The book is coded based on R Markdown and **bookdown** (<https://github.com/rstudio/bookdown>). For more about `bookdown` package, see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at <https://bookdown.org/yihui/bookdown/> f
+The book is coded based on R Markdown and **bookdown** (<https://github.com/rstudio/bookdown>). For more about `bookdown` package, see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at <https://bookdown.org/yihui/bookdown/> 
 
 To install the packages needed, use [renv](https://rstudio.github.io/renv/articles/renv.html)
 
