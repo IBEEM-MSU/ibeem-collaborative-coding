@@ -1,3 +1,25 @@
-`r if (knitr:::is_html_output()) '
-# References {-}
-'`
+# Resources {#resources}
+
+Eager to dive deeper into collaborative coding? Here are some more great resources that delve into specific areas we've overviewed during this workshop. 
+
+## Data Wrangling 
+
+* **[Data Cleaning and Quality Control (Environmental Data Initiative)](https://edirepository.org/resources/cleaning-data-and-quality-control)**: A great overview of best practices in organizing data sets, arranging data tables, and defining levels of data processing (Note: Focus on environmental data, but principles apply to any discipline).  
+
+* **[Metadata and the Ecological Metadata Language (Environmental Data Initiative)](https://edirepository.org/resources/creating-metadata-for-publication)**: Introduction to Ecological Metadata Language with tools for creating EML-formatted metadata (Note: Focus on environmental data).   
+
+## Data Processing 
+
+* **[Data pipelining in R using the Targets package (Targets for Ecologists)](https://targets-ecology.netlify.app/)**: A step-by-step walkthrough guide for using the data pipelining tool "Targets" in the R programming language. Data pipelining is a great way to ensure reproducibility and speed up the generation of results by setting up the computer to keep track of all the steps in your analysis and re-running only those that are alterred when you make a change to the code. 
+
+* **[R doParallel: How to Parallelize R DataFrame Computations (Radečić 2024)](https://www.r-bloggers.com/2024/03/r-doparallel-how-to-parallelize-r-dataframe-computations/?utm_source=phpList&utm_medium=email&utm_campaign=R-bloggers-weekly&utm_content=HTML)**: Overview of the doParallel package in R and its ability to speed up data analyses by running in chunks of data in parallel.  
+
+* **[Implementing GitHub Actions continuous integration to reduce error rates in ecological data collection (Kim et al. 2022)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13982)**
+
+## Git/GitHub and Version Control 
+
+* **[Learn git branching interactively](https://learngitbranching.js.org/)**: A fun walk-through to learn basic git commands, including working on branches. Also includes some more advanced git techniques.  
+
+* **[Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution (Braga et al. 2023)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14108)**
+
+* **[Excuse Me, Do You Have a Moment to Talk About Version Control? (Bryan 2018)](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928)**: (Note: Full text available with MSU login)
