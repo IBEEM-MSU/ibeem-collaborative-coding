@@ -1,8 +1,7 @@
 ---
-title: "Collaborative Coding for Scientific Research: Git, GitHub, and open science"
-author: "Pat Bills & Kelly Kapsar"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+title: "<center>Collaborative Coding for Scientific Research: <br> Git, GitHub, and open science</center>"
+author: "<center>Pat Bills & Kelly Kapsar</center>"
+date: "<center>Last edited: `r Sys.Date()`</center>"
 output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
