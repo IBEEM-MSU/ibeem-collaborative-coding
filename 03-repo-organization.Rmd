@@ -95,7 +95,7 @@ Why would one want to be a GitHub tourist in the first place? Let set out a few 
 
 An old phrase in open source programming to describe how to track down problems or understand how a program works is "use the source, Luke!" 
 
-```{r source, echo=FALSE, out.width= "50%", out.extra='style="float:left; padding:10px"', fig.align="center", fig.cap="[Source](https://blog.codinghorror.com/learn-to-read-the-source-luke/)"} 
+```{r source, echo=FALSE, out.width= "50%", fig.align="center", fig.cap="[Source](https://blog.codinghorror.com/learn-to-read-the-source-luke/)"} 
 
 knitr::include_graphics("./figures/UseTheSourceLuke.jpg")
 ```
