@@ -1,14 +1,5 @@
 # Collaborating with GitHub
 
-**NOTE this is mostly moved into chapter 3 file for now**
-
-<!-- move this to Chapter 3 -->
-## Understanding commits 
-
-### How people communicate using commit messages
-Perspective of commit messages as communication can change what you include in a commit (independent of github)
-
-
 <!-- keep this in ch. 4 -->
 
 ## Project management with GitHub
@@ -64,5 +55,4 @@ Engaging with owners/maintainers and the broader coding community to identify an
 ## Github link awesomeness
 * Permalinks in code and issues
 * References to issues from commits and referencing to commits from comments
-
 

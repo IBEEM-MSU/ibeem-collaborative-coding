@@ -16,10 +16,19 @@ In this book we may use the terms "repository", "project", or "code-base" interc
 
 - We may think of projects as code base plus associated data files, and all of the work needed to complete the research.  However, git hub uses "project" to mean "project management features" (task tracking, due dates, work progress monitoring) which can be used for one or more repos.   A research project may require multiple repos (one for data entry & cleaning, one for analysis, and one for a website to show it all off) and a git hub project can tie those together.  This is a new feature that we won't go into much but we will go into the existing project management features that github has for repos (issue tracking)
 
+## Github in context
+
+Think of these systems as a path, building up each other: 
+
+1. code : files
+2. git : managed repository of files
+3. github: service for enhanced collaboration, communication and project managment based on git
+
+The heart of all of this is the code, and when one is trying to learn git and github as they presented it appears that github owns the code, but it's just a service.  Code is money and github is just the bank.  
 
 ## Git vs. Github
 
-There is frequent confusion between which aspect of using git  github for code mamagement is from git vs. github.  The following table attempts to clarify which concept and feature are part of the git system and can be used independently from github.    Github is the most widely used 'remote' git server as it offers great collaboration features.  
+Even expereinced coders are unsure of the boundary between git and github.   The following table attempts to clarify which concept and feature are part of the git system and can be used independently from github.    Github is the most widely used 'remote' git server as it offers great collaboration features.  
 
 | Feature originally of Git | Feature of Github Service |
 | --- | ---|
@@ -29,12 +38,12 @@ There is frequent confusion between which aspect of using git  github for code m
 | **branch**: git tracks these code versions for you and can provide lists using `git status`, `git branch -a` etc<br />many programing editors have a feature to visualize the tree/graph of branches | github allows you to easily show and switch between branches to compare without having to 'checkout' in your current directory.  and initiate a merge from there |
 | **merge**: combine changes from one branch to another using several different methods, alert when there are conflicts and resolve conflicts.    Can add a merge commit message to communicate | github has an interface for merging directly on the website to help you preview what will happen without affecting your local repository, or the main branch |
 | **Fork**: simply copy of a repository that someone has decided to work on independently.    In git, the repo that you forked from is called the 'upstream' repository. | Github has a button to fork a repository into your own account, and keeps track of where that fork comes from, and which github also called the 'upstream' repository. |
-| **remote/clone/push/pull**: git has the concept of remote repository running on a server that you can clone (download), push up changes, pull down others changes into your code.  The word 'origin' is a git convention. | Github is a remote server and provides the URL to you to be able to clone, push or pull. |
-|  | "**pull request**" is a sytem invented by github system to facilitate external collaboration.  Extensive ability to comment, review, and connect to the issue tracking system.  This perhaps is the core feature of github.  Note that other git servers use different terms, for example git servers at gitlab.com calls them '*merge requests*' |
+| **remote**: git was designed to share, and so the original 'git' program has a feature built in to act as server from which you can clone (download) a repo, push (up) changes, pull (down) others changes into your code.  An external git server is a 'remote.'  However the 'git server' requires the command line to run and has no web interface built in. | At it's core, Github is a git server and provides a URL for repos for clone, push or pull.  Unlike git, github can do this using WWW protocols and websites.  There are other systems that provide the same 'remote' service as github|
+|  | "**pull request**" is a process invented by github (and others) to facilitate accepting code from external collaborators.  Additionally it fosters communication among collaborators, given them the ability to comment on code, contact reviewer, and connect to an issue tracking system.  This perhaps is the core feature of github.  Note that other git servers use different terms, for example git servers at gitlab.com calls them '*merge requests*' |
+|    | "**issue**"  Issue tracking is not unique to git workflows, but general project management practice.  github has 'lite' project management features that integrate with git and code |
 
 
-
-## Git Features in github
+## git Features in Github
 
 This workshop assumes you've been trained in git, but perhaps not github.   Github makes most of the features of git very easy to find, and here are links to github's help for each of them: 
 
@@ -48,25 +57,71 @@ This workshop assumes you've been trained in git, but perhaps not github.   Gith
 
 - [Commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) <br/>
   ![github ui for viewing commits](https://docs.github.com/assets/cb-48474/mw-1440/images/help/commits/commits-page.webp){width=50%}
-  
 
-## Reading and Interpreting Git Commits like an Historian {#reading_commits}
 
-Resources
+
+## Reading and Interpreting Git Commits {#reading_commits}
+
+Reading through git commits is one of the best ways to learn about a codebase. 
+
+#### Other Resources for this section
+
 - [Github's git guide to commits](https://github.com/git-guides/git-commit)
+- [How to Level Up Your
+  Git Commit Messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) from the 'free code camp'
 
+The central feature of most version control system is the "commit" we describe above.    And version control, at it's heart, is da system for software developers to communicate.     Understanding the motivation and context of the 'git commit' is key to interpreting a code repository.
 
-Reading through git commits to learn how the package has grown, who has contributed, why a commit was made. 
+A git commit and the associate message should communicate:
 
-the concept that git and commits are form of communication with your colleagues, the public, and yourself. 
+- Why are these lines of code here?  What feature does this bit of code help to implement, or which bug was fixed?
+- What other code was changed, if any?   
+- Who made this change so I can ask them for more information if I need to (e.g. to debug or make changes to improve the codebase)? 
+- To a limited extent, why is the code structured this way?  (that is more often described in the code itself)
+- If my program incorporates, imports, or otherwise depends on this code if affected by this change? That is, I depend on this codebase and something has changed that makes my system crash.   
+
+We believe that approaching commits as communication will drive how you use git, and also help you to collaborate with github.  
 
 ### How people communicate using commit messages
-Perspective of commit messages as communication can change what you include in a commit (independent of github)
 
+What are the features of git (independent of github) to use commit messages as communication?       This is always covered in an introductory git course, and we review some of these above and chapter 2, but we summarize them here from the perspective of a communication system: 
 
-### Review commits
+1. the set of changes to the code.  when compare these changes to another version of the code, this is known as the "**diff**" (named for the utility that shows the changes)   
+2. the commit message
+3. option additional summary message
+4. other things not directly part of the commit that put the commit in context: the branch it's in, the fork it's a part of, and a link to a description of the feature or issue (more on all of those things later)
 
-git is much more than just a backup system, or a way to keep track of things.  it's a means to communicate about code, and the heart of this is the commit. 
+#### Guidelines for using commits
+
+These are some guidelines that software developers adhere to for using git commit
+
+1. Keep the commit focused on a very specific problem to fix or feature to add.   Note that features often require many small adjustments or changes and so a feature implementation in code can be a collection of these.   Some use the phrase "atomic" to describe the changes you make:  the smallest amount of change to make a difference, no less and no more.  
+2. could _should_ still work when commiting.  That is, don't commit unworking code unless you absolutely have to.  
+3. the git commit message should focus on "why" instead of "what": the code diff already shows the what 
+
+Some things to emphasize:  
+
+A good commit is focused on solving a single problem or making a change that helps to implementing a small feature.   This way it's very clear was code was changed or added and why.    When we you look over all the changes in a commit, it will be hard to to get a holistic understanding if it includes many changes lines across many files.   Explorering git commit logs in github will help you to understand how to use git more effectively.   Less is more when it comes to commits.
+
+It takes discipline to make the commits completely atomic.   We often think a change is complete,  only to find a typo or other problem after the commit is made.    Git has mechanisms for dealing with that we will define later.  ( 'squashed' commits, using branches, amending commits).  You may see commits that encompass many changes and seem perfects - they may actually be several commits that were 'squashed.`   
+
+Git+github is not a backup system.    If you want to save all the work you've done use a real file back-up system, not git.    Mac and Windows both have backup systems built-in, and you should use them to make as frequent snapshots or backups as possible.    You could also have a copy of your code folder on an external drive.  
+
+What if you are given a large set of changes that only halfway implements a bug fix or feature?  Would you understand what do to next?  that is one reason why commits should be as complete as possible.     Sometimes because of how teams agree to work you  may be encouraged to push all of your code so it can be reviewed, even if you are not finished.   In that case devs often put the 
+
+#### Examples of ineffective commits:
+
+A change to a few lines in the readme for grammar or other minor edit, with the message "*update readme*"  - this doesn't say why the README was updated!   
+
+A commit that says "*daily commit*" or "*end-of-day commit*" tells me nothing about why the code was changed, or how I should start up to complete it if I'm asked.    Again, this appears to be an attempt to use git+github as a backup system.   Don't do that. 
+
+git commit message "*fix*"  - fix what and why?
+
+#### Effective Commits
+
+Effective commits can be 1 line of code or hundreds, it really depends on the context and what is being communicated.  
+
+One example of a common problem in coding is the 'boundary error' or the related 'off by one' error.   for example if you are checking if a loop is done for a counter that is reduced each time, and you have `counter==0`  but some how the counter can be negative in some cases, the loop will continue!   The solution is to change your `if` condition to `counter < 1`  and a good commit message would "*fix boundary error in replication loop*"   You don't need to mention the file name - that will be in the diff.  
 
 #### Viewing commits and diffs using github
 
@@ -74,13 +129,14 @@ git is much more than just a backup system, or a way to keep track of things.  i
  - A good message succintly says what was changed and why 
  - linking with issues
 
-A good commit is focused on solving a single problem or making a change that helps to implementing a small feature.   This way it's very clear was code was changed or added and why.    Viewing other devs commit log help you to understand how to use git more effectively when essentially less is more.   A commit is not a way to 'backup' yuor code.   There are other ways to do that.   A commit that says "nightly commit" tells me nothing about why the code was changed.   A commit should include all the changes necessary to solve a small issue, and the commit should work after it's done. 
 
-Since I often make mistakes, I often thing a change is complete and commit my code, only to find a typo or other problem I missed.  It's possible to 'squash' commits into a single commit (the details will be discussed in a later workshop).  You may see commits that encompass many changes and seem perfects - they may actually be several commits that were 'squashed.`   
 
 ​	
 
+
+
 #  Anatomy of a code repository {#repo-organization}
+
 <!-- move to a new chapter? -->
 
 we've learn about git and github, which is how to work and communicate changes in code, but what about the code itself?   This section may help you decipher the files and folders in a code base to make use of it, regardless of where it may be.  However github makes it very easy to navigate code, and is integral to communicate what the code is for. 
