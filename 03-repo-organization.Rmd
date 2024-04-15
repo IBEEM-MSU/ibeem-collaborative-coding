@@ -64,7 +64,7 @@ This workshop assumes you've been trained in git, but perhaps not github.   Gith
 
 Reading through git commits is one of the best ways to learn about a codebase. 
 
-#### Other Resources for this section
+### Other Resources for this section
 
 - [Github's git guide to commits](https://github.com/git-guides/git-commit)
 - [How to Level Up Your
@@ -103,11 +103,12 @@ Some things to emphasize:
 
 A good commit is focused on solving a single problem or making a change that helps to implementing a small feature.   This way it's very clear was code was changed or added and why.    When we you look over all the changes in a commit, it will be hard to to get a holistic understanding if it includes many changes lines across many files.   Explorering git commit logs in github will help you to understand how to use git more effectively.   Less is more when it comes to commits.
 
-It takes discipline to make the commits completely atomic.   We often think a change is complete,  only to find a typo or other problem after the commit is made.    Git has mechanisms for dealing with that we will define later.  ( 'squashed' commits, using branches, amending commits).  You may see commits that encompass many changes and seem perfects - they may actually be several commits that were 'squashed.`   
+It takes discipline to make the commits completely atomic.   We often think a change is complete,  only to find a typo or other problem after the commit is made.    Git has mechanisms for dealing with that we will define later. 
 
 Git+github is not a backup system.    If you want to save all the work you've done use a real file back-up system, not git.    Mac and Windows both have backup systems built-in, and you should use them to make as frequent snapshots or backups as possible.    You could also have a copy of your code folder on an external drive.  
 
-What if you are given a large set of changes that only halfway implements a bug fix or feature?  Would you understand what do to next?  that is one reason why commits should be as complete as possible.     Sometimes because of how teams agree to work you  may be encouraged to push all of your code so it can be reviewed, even if you are not finished.   In that case devs often put the 
+What if you are given a large set of changes that only halfway implements a bug fix or feature?  Would you understand what do to next?  that is one reason why commits should be as complete as possible.   Sometimes because of how teams agree to work you  may be encouraged to push all of your code so it can be reviewed, even if you are not finished.   In that case devs often put the acronym "*WIP*" for "*Work in Progress*" to indicate the code is not complete, or "*untested*" to indicate the code is complete but has not been rigorously tested.  
+
 
 #### Examples of ineffective commits:
 
@@ -115,7 +116,7 @@ A change to a few lines in the readme for grammar or other minor edit, with the 
 
 A commit that says "*daily commit*" or "*end-of-day commit*" tells me nothing about why the code was changed, or how I should start up to complete it if I'm asked.    Again, this appears to be an attempt to use git+github as a backup system.   Don't do that. 
 
-git commit message "*fix*"  - fix what and why?
+git commit message "*fix*" --  fix what and why?
 
 #### Effective Commits
 
@@ -123,23 +124,36 @@ Effective commits can be 1 line of code or hundreds, it really depends on the co
 
 One example of a common problem in coding is the 'boundary error' or the related 'off by one' error.   for example if you are checking if a loop is done for a counter that is reduced each time, and you have `counter==0`  but some how the counter can be negative in some cases, the loop will continue!   The solution is to change your `if` condition to `counter < 1`  and a good commit message would "*fix boundary error in replication loop*"   You don't need to mention the file name - that will be in the diff.  
 
+#### Real-world dev cycle
+
+Being disciplined for commits is not easy and the authors frequently don't follow this.   Here is an example real-world, imperfect workflow: 
+
+1. for example adding a feature "add logistic regression analysis"
+2. add code to accomplish this (and data files, parameters, etc)
+3. quick testing show that is works!
+4. add changed files and commit "add log regression for X,Y, Z..."
+5. test again and find there is a problem!  
+6. fix the code, and test again
+7. git add the files and commit "fix missing parameter for logistic regression analysis" or something like that
+
+Now we have two diffs for one feature.  
+
+Git has some great features for dealing with this that we will cover, and that will make you understand why everyone else's commit history looks so clean and perfect!    One major solution is to use branching, which we described above.   Branching is like telling the sub-plot in a story.   Other solutions are 'squashed' commits and amending commits.  
+
+<!-- todo add the story of learning and then explaining directions to a new destination --> 
+
+
 #### Viewing commits and diffs using github
 
- - the user interface (walk through with an example)
- - A good message succintly says what was changed and why 
- - linking with issues
+The git hub user interface makes it very easy to explore commits and code changes.   For the workshop that this text supports, we walk through with an example.  
 
-
-
-​	
+<!-- TODO: add links to example github commits in projects -->
 
 
 
 #  Anatomy of a code repository {#repo-organization}
 
-<!-- move to a new chapter? -->
-
-we've learn about git and github, which is how to work and communicate changes in code, but what about the code itself?   This section may help you decipher the files and folders in a code base to make use of it, regardless of where it may be.  However github makes it very easy to navigate code, and is integral to communicate what the code is for. 
+We've learn about git and github, which is how to work and communicate changes in code, but what about the code itself?   This section may help you decipher the files and folders in a code base to make use of it, regardless of where it may be.  However github makes it very easy to navigate code, and is integral to communicate what the code is for. 
 
 
 ## Why read the source code?
