@@ -97,7 +97,7 @@ An old phrase in open source programming to describe how to track down problems 
 
 ```{r source, echo=FALSE, out.width= "50%", out.extra='style="float:left; padding:10px"', fig.align="center", fig.cap="[Source](https://blog.codinghorror.com/learn-to-read-the-source-luke/)"} 
 
-knitr::include_graphics("./figures/UseTheSource.jpg")
+knitr::include_graphics("./figures/UseTheSourceLuke.jpg")
 ```
 
 
