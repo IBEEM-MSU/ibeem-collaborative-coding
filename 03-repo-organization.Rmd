@@ -43,9 +43,13 @@ As a user of such a package, you don't need to access the code via github - you 
 
 These codebases may not be installable projects, but are intended to be re-used by someone else, and that is often your future self!   Many of these include instructions for clone the code, getting all the piece you need installed, and using the program.  
 
-An example of this is https://github.com/billspat/hpcc_megadetector which was created for a handful of researchers at MSU to run a specific chunk of python code to identify wildlife in millions of photos.  There are already existing deep-learning model code, and an install GUI program, but nothing specific to running on MSU's super computer.  To accomplish this we forked just the pieces of code we needed from this existing system, modified it to do the work we needed, created 'wrapper scripts' that coudl run them on HPC, and added documentation.  it hasn't been used in two years not and it would require updataing to be used again.  
-
 Another example of a 'project' repositories are specific-purpose web applications.   If your goal is to create a web application to help others use your software (rather than write a desktop application or leave it as command line only) then starting with an existing 
+
+The main difference between how you might use a "project" type repository is that, becuase it's not a package, you can't typically use package installers like `pip` or `install.packages()`.   Instead you will need to clone the repository to your computer and follow the install/usage instructions.  
+
+**Example**
+
+An example of this is https://github.com/billspat/hpcc_megadetector.  This code was created for a handful of researchers at MSU to run a specific chunk of python code to identify wildlife in millions of photos.  There are already existing deep-learning model code, and an install GUI program, but nothing specific to running on MSU's super computer.  To accomplish this we forked just the pieces of code we needed from this existing system, modified it to do the work we needed, created 'wrapper scripts' that coudl run them on HPC, and added documentation.  it hasn't been used in two years not and it would require updataing to be used again.  
 
 
 ### Reference Codebase (readable) 
@@ -56,28 +60,21 @@ Many projects use code to clean data sets in a reproducible way for use in analy
 
 However there are many good practices one can follow to start with code that can be re-useable by others that we will cover in a later workshop.  
 
-## Package vs project structures
+You may clone this type of repository as well, but don't expect to be able to run much of it as they typically require specific input data or careful configuration of folders/files.   
+
+**Examples**
+
+* https://github.com/bioXgeo/neotropical_geodiv  : R code to support the publication "Assessing the impact of scale-dependent geodiversity on species distribution models in a biodiversity hotspot"
+
+This code, based on the Wallace R package, is organized to run specifically on MSU's HPC with a large input data from a previous project.   The code is published to demonstrate how the models were to run to generate the results in the publication.  
+
+* [Source Code for the Apollo 11 Mission](https://github.com/chrislgarry/Apollo-11) Codebase in 'assembly language' that controlled vehicles for space travels.     This is clearly for reference!  There are no computers on which this could run (unless someone creates a vitual simulator of the Apollo command module that can run) 
 
 
-## Examples by Codebase Types
-
-### Reference: 
-
-Here is a codebase in 'assembly language' that controlled vehicles for space travel:  [Source Code for the Apollo 11 Mission](https://github.com/chrislgarry/Apollo-11)
-
-This is clearly for reference!  There are no computers on which this could run (unless someone creates a vitual simulator of the Apollo command module that can run) 
+* https://github.com/krishnanlab/PyGenePlexus The Geneplexus project (Arjun Krishnan lab) creates and applies machine-learning models from gene networks to predict which novel genes may be related to a geneset one is ins=terested in.  It started as a reference code to support a paper.  This lab then honed the code to be more organized and logical, and while the project was not 'installable' but had instructions downloading the code, organizing the data and running the functions in Python.  We found creating an installable package made the system much easier to use for most people.   At that point they not only organized the code into a PIP-installed package, they improved and organized the code even further.   In addition it made it easier to incorporate their codebase into a website that created a graphical interface to selecting inputs and to vizualizing the outputs.   The web application could be a separate project that 'imported' the geneplexus package, rather than copy/pasted code that had to be constantly updated. The two projects(geneplexus package and geneplexus cloud-based web application) could the be worked on  concurrently. 
 
 
-***Examples of some reference code became a packages**
-
-The Geneplexux project is from MSU in the Arjun Krishnan lab and is system that creates and applies machine-learning models from gene networks to predict which novel genes may be related to a geneset one is ins=terested in.  It started as a project of code that demonstrated the basis of the system (e.g. reference code).  This lab then honed the code to be more organized and logical, and while the project was not 'installable' but had instructions downloading the code, organizing the data and running the functions in Python.   They found creating an installable package made the system much easier to use for most people.   At that point they not only organized the code into a PIP-installed package, they improved and organized the code even further.   In addition it made it easier to incorporate their codebase into a website that created a graphical interface to selecting inputs and to vizualizing the outputs.   The web application could be a separate project that 'imported' the geneplexus package, rather than integrating the code. The two project (geneplexus package and geneplexus cloud-based web application) could proceed concurrently. 
-
-Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.  The project will have enough instructions to allow for 
-
-
-## Implications of repository type for re-use
-
-How you may still use code that can't be 'installed' as a package
+Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.
 
 
 ## Dependencies/requirements
