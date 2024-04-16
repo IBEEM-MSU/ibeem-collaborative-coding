@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Git and Github In Practice |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science </title>
+  <meta name="description" content="This is a guide to developing and engaging with open/team science projects on GitHub." />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Git and Github In Practice |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science " />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a guide to developing and engaging with open/team science projects on GitHub." />
+  <meta name="github-repo" content="IBEEM-MSU/ibeem-collaborative-coding" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Git and Github In Practice |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science " />
+  
+  <meta name="twitter:description" content="This is a guide to developing and engaging with open/team science projects on GitHub." />
+  
+
+<meta name="author" content=" Pat Bills &amp; Kelly Kapsar " />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="repo-organization.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Collaborative Coding for Scientific Research: Git, GitHub, and open science</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i><b>1.1</b> Abstract</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.3</b> Prerequisites</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.4</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="github-in-practice.html"><a href="github-in-practice.html"><i class="fa fa-check"></i><b>2</b> Git and Github In Practice</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="github-in-practice.html"><a href="github-in-practice.html#what-is-a-code-base"><i class="fa fa-check"></i><b>2.1</b> What is a code-base?</a></li>
+<li class="chapter" data-level="2.2" data-path="github-in-practice.html"><a href="github-in-practice.html#code-vs-git-vs-github"><i class="fa fa-check"></i><b>2.2</b> Code vs Git vs Github</a></li>
+<li class="chapter" data-level="2.3" data-path="github-in-practice.html"><a href="github-in-practice.html#review-principles-of-git"><i class="fa fa-check"></i><b>2.3</b> Review: Principles of Git</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="github-in-practice.html"><a href="github-in-practice.html#distributed-version-control"><i class="fa fa-check"></i><b>2.3.1</b> Distributed version control</a></li>
+<li class="chapter" data-level="2.3.2" data-path="github-in-practice.html"><a href="github-in-practice.html#why-use-git"><i class="fa fa-check"></i><b>2.3.2</b> Why use Git?</a></li>
+<li class="chapter" data-level="2.3.3" data-path="github-in-practice.html"><a href="github-in-practice.html#git-typical-workflow-review"><i class="fa fa-check"></i><b>2.3.3</b> Git typical workflow (review)</a></li>
+<li class="chapter" data-level="2.3.4" data-path="github-in-practice.html"><a href="github-in-practice.html#why-use-github"><i class="fa fa-check"></i><b>2.3.4</b> Why use GitHub?</a></li>
+<li class="chapter" data-level="2.3.5" data-path="github-in-practice.html"><a href="github-in-practice.html#alternatives-to-github"><i class="fa fa-check"></i><b>2.3.5</b> Alternatives to GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="github-in-practice.html"><a href="github-in-practice.html#git-vs.-github"><i class="fa fa-check"></i><b>2.4</b> Git vs. Github</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="github-in-practice.html"><a href="github-in-practice.html#other-resources-for-this-section"><i class="fa fa-check"></i><b>2.4.1</b> Other Resources for this section</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="github-in-practice.html"><a href="github-in-practice.html#how-people-communicate-using-commit-messages"><i class="fa fa-check"></i><b>2.5</b> How people communicate using commit messages</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="github-in-practice.html"><a href="github-in-practice.html#guidelines-for-using-commits"><i class="fa fa-check"></i><b>2.5.1</b> Guidelines for using commits</a></li>
+<li class="chapter" data-level="2.5.2" data-path="github-in-practice.html"><a href="github-in-practice.html#examples-of-ineffective-commits"><i class="fa fa-check"></i><b>2.5.2</b> Examples of ineffective commits:</a></li>
+<li class="chapter" data-level="2.5.3" data-path="github-in-practice.html"><a href="github-in-practice.html#effective-commits"><i class="fa fa-check"></i><b>2.5.3</b> Effective Commits</a></li>
+<li class="chapter" data-level="2.5.4" data-path="github-in-practice.html"><a href="github-in-practice.html#real-world-commit-work-flow"><i class="fa fa-check"></i><b>2.5.4</b> Real-world commit work-flow</a></li>
+<li class="chapter" data-level="2.5.5" data-path="github-in-practice.html"><a href="github-in-practice.html#viewing-commits-and-diffs-using-git"><i class="fa fa-check"></i><b>2.5.5</b> Viewing commits and diffs using git</a></li>
+<li class="chapter" data-level="2.5.6" data-path="github-in-practice.html"><a href="github-in-practice.html#viewing-commits-and-diffs-using-github"><i class="fa fa-check"></i><b>2.5.6</b> Viewing commits and diffs using github</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="github-in-practice.html"><a href="github-in-practice.html#github-issue-tracking"><i class="fa fa-check"></i><b>2.6</b> Github issue tracking</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="github-in-practice.html"><a href="github-in-practice.html#alternatives"><i class="fa fa-check"></i><b>2.6.1</b> Alternatives</a></li>
+<li class="chapter" data-level="2.6.2" data-path="github-in-practice.html"><a href="github-in-practice.html#effective-issues-are-focused"><i class="fa fa-check"></i><b>2.6.2</b> Effective issues are focused</a></li>
+<li class="chapter" data-level="2.6.3" data-path="github-in-practice.html"><a href="github-in-practice.html#example-issues"><i class="fa fa-check"></i><b>2.6.3</b> Example Issues</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="github-in-practice.html"><a href="github-in-practice.html#practical-git-collab-using-branches"><i class="fa fa-check"></i><b>2.7</b> Practical git collab using branches</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="github-in-practice.html"><a href="github-in-practice.html#merging-and-conflicts"><i class="fa fa-check"></i><b>2.7.1</b> Merging and conflicts</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="github-in-practice.html"><a href="github-in-practice.html#collaborative-coding-forking-and-pull-requests"><i class="fa fa-check"></i><b>2.8</b> Collaborative coding: Forking and pull requests</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="github-in-practice.html"><a href="github-in-practice.html#pull-request-examples"><i class="fa fa-check"></i><b>2.8.1</b> Pull-request examples</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="github-in-practice.html"><a href="github-in-practice.html#example-of-a-real-world-detective-work-using-github"><i class="fa fa-check"></i><b>2.9</b> Example of a real-world detective work using github</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="repo-organization.html"><a href="repo-organization.html"><i class="fa fa-check"></i><b>3</b> Anatomy of a GitHub repository</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="repo-organization.html"><a href="repo-organization.html#why-read-the-source-code"><i class="fa fa-check"></i><b>3.1</b> Why read the source code?</a></li>
+<li class="chapter" data-level="3.2" data-path="repo-organization.html"><a href="repo-organization.html#understanding-different-types-of-code-bases"><i class="fa fa-check"></i><b>3.2</b> Understanding different types of code bases</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="repo-organization.html"><a href="repo-organization.html#package-codebase-installable"><i class="fa fa-check"></i><b>3.2.1</b> Package Codebase (installable)</a></li>
+<li class="chapter" data-level="3.2.2" data-path="repo-organization.html"><a href="repo-organization.html#project-codebase-useable"><i class="fa fa-check"></i><b>3.2.2</b> Project Codebase (useable)</a></li>
+<li class="chapter" data-level="3.2.3" data-path="repo-organization.html"><a href="repo-organization.html#reference-codebase-readable"><i class="fa fa-check"></i><b>3.2.3</b> Reference Codebase (readable)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="repo-organization.html"><a href="repo-organization.html#dependenciesrequirements"><i class="fa fa-check"></i><b>3.3</b> Dependencies/requirements</a></li>
+<li class="chapter" data-level="3.4" data-path="repo-organization.html"><a href="repo-organization.html#finding-and-using-documentation"><i class="fa fa-check"></i><b>3.4</b> Finding and Using Documentation</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="repo-organization.html"><a href="repo-organization.html#code-as-documentation"><i class="fa fa-check"></i><b>3.4.1</b> Code as documentation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="repo-organization.html"><a href="repo-organization.html#tests-a-great-source-of-insight"><i class="fa fa-check"></i><b>3.4.2</b> Tests: a great source of insight</a></li>
+<li class="chapter" data-level="3.4.3" data-path="repo-organization.html"><a href="repo-organization.html#other-items-documentation-how-to-work-with-the-code"><i class="fa fa-check"></i><b>3.4.3</b> Other items documentation how to work with the code</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="repo-organization.html"><a href="repo-organization.html#github-workflows"><i class="fa fa-check"></i><b>3.5</b> Github Workflows</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="collaborating.html"><a href="collaborating.html"><i class="fa fa-check"></i><b>4</b> Collaborating with GitHub</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="collaborating.html"><a href="collaborating.html#requesting-helpfeatures-or-reporting-bugs-using-reprexes."><i class="fa fa-check"></i><b>4.1</b> Requesting help/features or reporting bugs (using reprexes).</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="engaging-with-the-community.html"><a href="engaging-with-the-community.html"><i class="fa fa-check"></i><b>5</b> Engaging with the community</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="engaging-with-the-community.html"><a href="engaging-with-the-community.html#complain-or-fix"><i class="fa fa-check"></i><b>5.1</b> Complain or Fix?</a></li>
+<li class="chapter" data-level="5.2" data-path="engaging-with-the-community.html"><a href="engaging-with-the-community.html#requesting-helpfeatures-or-reporting-bugs-using-reprexes.-1"><i class="fa fa-check"></i><b>5.2</b> Requesting help/features or reporting bugs (using reprexes).</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="engaging-with-the-community.html"><a href="engaging-with-the-community.html#example-how-ask-package-maintainers-to-accommodate-the-global-dateline-and-very-high-latitudes"><i class="fa fa-check"></i><b>5.2.1</b> Example: How ask package maintainers to accommodate the global dateline and very high latitudes</a></li>
+<li class="chapter" data-level="5.2.2" data-path="engaging-with-the-community.html"><a href="engaging-with-the-community.html#example-ggmap-package"><i class="fa fa-check"></i><b>5.2.2</b> Example: ggmap package</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="engaging-with-the-community.html"><a href="engaging-with-the-community.html#engaging-with-the-community-1"><i class="fa fa-check"></i><b>5.3</b> Engaging with the community</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>6</b> Exercise: Working with someone else’s repo</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="exercise.html"><a href="exercise.html#about-markdown"><i class="fa fa-check"></i><b>6.1</b> About Markdown</a></li>
+<li class="chapter" data-level="6.2" data-path="exercise.html"><a href="exercise.html#instructions"><i class="fa fa-check"></i><b>6.2</b> Instructions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>7</b> Conclusions</a></li>
+<li class="chapter" data-level="8" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>8</b> Glossary</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="glossary.html"><a href="glossary.html#branch"><i class="fa fa-check"></i><b>8.0.1</b> <strong>Branch</strong>:</a></li>
+<li class="chapter" data-level="8.0.2" data-path="glossary.html"><a href="glossary.html#commit"><i class="fa fa-check"></i><b>8.0.2</b> <strong>Commit</strong>:</a></li>
+<li class="chapter" data-level="8.0.3" data-path="glossary.html"><a href="glossary.html#commit-hash"><i class="fa fa-check"></i><b>8.0.3</b> <strong>Commit hash</strong>:</a></li>
+<li class="chapter" data-level="8.0.4" data-path="glossary.html"><a href="glossary.html#changeset"><i class="fa fa-check"></i><b>8.0.4</b> <strong>Changeset</strong>:</a></li>
+<li class="chapter" data-level="8.0.5" data-path="glossary.html"><a href="glossary.html#git-flow"><i class="fa fa-check"></i><b>8.0.5</b> <strong>Git flow</strong>:</a></li>
+<li class="chapter" data-level="8.0.6" data-path="glossary.html"><a href="glossary.html#git-log-graph"><i class="fa fa-check"></i><b>8.0.6</b> <strong>Git log graph</strong>:</a></li>
+<li class="chapter" data-level="8.0.7" data-path="glossary.html"><a href="glossary.html#github-flavored-markdown-gfm"><i class="fa fa-check"></i><b>8.0.7</b> <strong>GitHub flavored-markdown (GFM)</strong>:</a></li>
+<li class="chapter" data-level="8.0.8" data-path="glossary.html"><a href="glossary.html#issue"><i class="fa fa-check"></i><b>8.0.8</b> <strong>Issue</strong>:</a></li>
+<li class="chapter" data-level="8.0.9" data-path="glossary.html"><a href="glossary.html#markdown"><i class="fa fa-check"></i><b>8.0.9</b> <strong>Markdown</strong>:</a></li>
+<li class="chapter" data-level="8.0.10" data-path="glossary.html"><a href="glossary.html#pull-request-pr"><i class="fa fa-check"></i><b>8.0.10</b> <strong>Pull request (PR)</strong>:</a></li>
+<li class="chapter" data-level="8.0.11" data-path="glossary.html"><a href="glossary.html#repository-repo"><i class="fa fa-check"></i><b>8.0.11</b> <strong>Repository (Repo)</strong>:</a></li>
+<li class="chapter" data-level="8.0.12" data-path="glossary.html"><a href="glossary.html#remote"><i class="fa fa-check"></i><b>8.0.12</b> <strong>Remote</strong>:</a></li>
+<li class="chapter" data-level="8.0.13" data-path="glossary.html"><a href="glossary.html#squashed-commits"><i class="fa fa-check"></i><b>8.0.13</b> <strong>Squashed commits</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>9</b> Resources</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="resources.html"><a href="resources.html#data-wrangling"><i class="fa fa-check"></i><b>9.1</b> Data Wrangling</a></li>
+<li class="chapter" data-level="9.2" data-path="resources.html"><a href="resources.html#data-processing"><i class="fa fa-check"></i><b>9.2</b> Data Processing</a></li>
+<li class="chapter" data-level="9.3" data-path="resources.html"><a href="resources.html#gitgithub-and-version-control"><i class="fa fa-check"></i><b>9.3</b> Git/GitHub and Version Control</a></li>
+<li class="chapter" data-level="9.4" data-path="resources.html"><a href="resources.html#example-repositories"><i class="fa fa-check"></i><b>9.4</b> Example repositories</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="resources.html"><a href="resources.html#package"><i class="fa fa-check"></i><b>9.4.1</b> Package</a></li>
+<li class="chapter" data-level="9.4.2" data-path="resources.html"><a href="resources.html#project"><i class="fa fa-check"></i><b>9.4.2</b> Project</a></li>
+<li class="chapter" data-level="9.4.3" data-path="resources.html"><a href="resources.html#reference"><i class="fa fa-check"></i><b>9.4.3</b> Reference</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="appendix-workshop-outline.html"><a href="appendix-workshop-outline.html"><i class="fa fa-check"></i><b>10</b> Appendix: Workshop Outline</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="appendix-workshop-outline.html"><a href="appendix-workshop-outline.html#intro-15-min"><i class="fa fa-check"></i><b>10.1</b> Intro (15 min)</a></li>
+<li class="chapter" data-level="10.2" data-path="appendix-workshop-outline.html"><a href="appendix-workshop-outline.html#seminardemo-65-min"><i class="fa fa-check"></i><b>10.2</b> Seminar/Demo (65 min)</a></li>
+<li class="chapter" data-level="10.3" data-path="appendix-workshop-outline.html"><a href="appendix-workshop-outline.html#hands-on-20-25-min"><i class="fa fa-check"></i><b>10.3</b> Hands-on (20-25 min)</a></li>
+<li class="chapter" data-level="10.4" data-path="appendix-workshop-outline.html"><a href="appendix-workshop-outline.html#conclusion-15-min"><i class="fa fa-check"></i><b>10.4</b> Conclusion (15 min)</a></li>
+<li class="chapter" data-level="10.5" data-path="appendix-workshop-outline.html"><a href="appendix-workshop-outline.html#follow-up-survey"><i class="fa fa-check"></i><b>10.5</b> Follow-up Survey</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><center><br />
+Collaborative Coding for Scientific Research: <br> Git, GitHub, and open science<br />
+</center></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="github-in-practice" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Git and Github In Practice<a href="github-in-practice.html#github-in-practice" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter will provide orientation to open science code repositories, via github, so you can find and use code that may be useful to you.</p>
+<p>We learned to organize and work through our own projects by observing how others organize theirs. The amazing thing is that you can find hundreds of excellent examples to learn from as even major companies put their code on github.</p>
+<!-- Outline
+
+# git and github in practice {#github-in-practice}
+
+-   list of git features/ commands we are assuming familiarity with in a git vs. github comparison
+-   foreach {commits, issues, branches, forks & pull requests, rebase}:
+    -   (Kelly) define the term/feature: review of the feature, rely on previous workshops/existing doc (as written for ch2)
+    -   (Kellly) point to how github works with this, link to github images and docs
+    -   (Pat) describe important elements of this feature in practice: principles of using commits, how much code to put into a commit and why ( this helps to understand the language of OSS collaboration )
+    -   (Pat) outline a typical workflow for using the feature
+        -   this helps to understand the context of the culture of OSS collaboration
+        -   real world example
+
+Anatomy of a codebase (15 min)** - common elements (cover licensing here in 1 sentence and a link) - our taxonomy - example codebases
+
+**Using that code in your work** (10 minutes) - clonsider the licenceing
+
+**Engaging with issues and PRs** ( 15 mintues ) - demo of that for a README file (Pat/Beth's repo) - demo of that with our own book
+
+-->
+<div id="what-is-a-code-base" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> What is a code-base?<a href="github-in-practice.html#what-is-a-code-base" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this book we may use the terms “repository”, “project”, or “code-base” interchangeably but they have slightly different meanings:</p>
+<ul>
+<li><p>“Code base” is a colloquial term for any collection of related to code in one or more files that works together to perform a function, or provide an application.</p></li>
+<li><p>A “repository” is an collection of code managed by git, not necessarily on an external server (either on github or elsewhere). This could be on your laptop. The database of vesion history is inside the .git folder, and so that .git folder is the repository. We say this is a “git repo”</p></li>
+<li><p>Github also calls their units a “repository”, so in Github the URL pattern <code>github.com/&lt;user_name&gt;/&lt;repository_name&gt;</code> contains a git repository (and possibly more than one )</p></li>
+<li><p>We may think of projects as code base plus associated data files, and all of the work needed to complete the research. However, git hub uses “project” to mean “project management features” (task tracking, due dates, work progress monitoring) which can be used for one or more repos. A research project may require multiple repos (one for data entry &amp; cleaning, one for analysis, and one for a website to show it all off) and a git hub project can tie those together. This is a new feature that we won’t go into much but we will go into the existing project management features that github has for repos (issue tracking)</p></li>
+</ul>
+</div>
+<div id="code-vs-git-vs-github" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Code vs Git vs Github<a href="github-in-practice.html#code-vs-git-vs-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Think of these systems as a hierarchy, building up each other:</p>
+<ol style="list-style-type: decimal">
+<li><strong>code</strong> : files (for example a zip file you send to someone)</li>
+<li><strong>git</strong> repository: managed repository of files with version control tracking</li>
+<li><strong>github</strong>: hosting service for git repositories with enhanced collaboration, communication and project management based on git.</li>
+</ol>
+<p>The heart of all of this is the code, and when one is trying to learn git and github as they presented it appears that github owns the code, but it’s just a service. Code is money and github is just the bank.</p>
+<!-- original review -->
+</div>
+<div id="review-principles-of-git" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Review: Principles of Git<a href="github-in-practice.html#review-principles-of-git" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:workflow2"></span>
+<img src="figures/GitWorkflowFig2.png" alt="Source: [Allsion Horst](https://allisonhorst.com)" width="65%" />
+<p class="caption">
+Figure 2.1: Source: <a href="https://allisonhorst.com">Allsion Horst</a>
+</p>
+</div>
+<div id="distributed-version-control" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Distributed version control<a href="github-in-practice.html#distributed-version-control" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Version control systems are an answer to the age-old problem of “script_final.R”, “script_submitted_to_Science.R”, “script_finaler.R”, and “script_final_i_swear_this_is_the_last_one.R” that tend to clog up and confuse storage space on all of our computers. By tracking changes in a document (in this context, usually a coded script), version control systems allow you to keep a record of all the changes that you have made without having to re-save new documents every time. Version control systems also allow for multiple users to make changes to the same document and keep track of the who-did-what side of things.</p>
+<p>Version control systems store all of these changes and iterations in what’s called a “repository” (also known as a repo). Think of the repository as the archive that keeps track of all of the changes that you’ve made to your work over time. Typically a single repository is created for each unique project, program, package, etc. In the context of scientific research, a new repository is often created to store the code needed for the analyses in an individual manuscript. This way, the repository can be referenced in a publication and readers of your work can look “under-the-hood” of the methods you used. This approach increases the transparency and accuracy of research by allowing others to reproduce your results and identify and possible mistakes.</p>
+There are two main types of version control systems: <strong><em>centralized</em></strong> and <strong><em>distributed</em></strong>. The difference lies in where the repository is stored. In a centralized version control system, there is a single computer server that hosts the repository. All the people editing to the repository must have access to that server. The downside of centralized version control is that if the server crashes or gets corrupted or decides to take a vacation, your team is in big trouble. In other words, there is little redundancy in a centralized version control system. Distributed version control systems, on the other hand, allow all the contributors create a “clone” of the repository that they store on their own computer. They can make changes to this local repository and, if they want to share those changes with others, they can “push” them up to a shared repository, often stored in an online-based repository hosting system (see <a href="github-in-practice.html#why-use-github">Why use Github?</a> below). In this way, if the cloud based repository decides to up and explode for some unknown reason (or a known reason), there are multiple backup versions on contributor’s local computers that can be used to restore the repo.
+<div class="figure"><span style="display:block;" id="fig:vc"></span>
+<img src="figures/CentralizedVsDistributedVC.png" alt="Source: [geeksforgeeks.org](https://www.geeksforgeeks.org/centralized-vs-distributed-version-control-which-one-should-we-choose/)" width="80%" />
+<p class="caption">
+Figure 2.2: Source: <a href="https://www.geeksforgeeks.org/centralized-vs-distributed-version-control-which-one-should-we-choose/">geeksforgeeks.org</a>
+</p>
+</div>
+</div>
+<div id="why-use-git" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Why use Git?<a href="github-in-practice.html#why-use-git" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Coding has become a nearly ubiquitous part of scientific research, with scientists developing increasingly complex analyses requiring extensive data wrangling and post-analysis processing and visualization steps. The development of the code needed to run these analyses often goes through many iterations during the initial development process through to the final stages of peer review. Using a distributed version control system like Git can help researchers to code collaboratively, manage and organize different versions of the same analysis, and serve as an archive of the methods used to process and analyze research data. These advantages help to support researchers in the pursuit of “<a href="https://www.cos.io/open-science">open science</a>” by increasing transparency while also serving as a useful record that can be referred back to and reproduced in the future.</p>
+<p>If you’re looking for more information on Git, check out <a href="https://happygitwithr.com/big-picture">Happy Git and GitHub for the useR</a>.</p>
+</div>
+<div id="git-typical-workflow-review" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Git typical workflow (review)<a href="github-in-practice.html#git-typical-workflow-review" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is an extremely simplified description of the components of a basic git workflow, typically covered in introductory git books and workshops. For much more detail see</p>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">Pro Git, Chapter 2.2</a>.</li>
+<li><a href="https://docs.github.com/en/get-started/getting-started-with-git">Getting Started with Git</a> from Github</li>
+<li><a href="https://swcarpentry.github.io/git-novice/">Software Carpentry Git for Novices</a> workshop</li>
+</ul>
+<p><img src="figures/GitWorkflowFig.png" width="65%" style="float:right; padding:10px" /></p>
+<ul>
+<li><strong><em>Cloning</em></strong>: First get a copy of an existing repository to work on. Cloning is the term used for downloading of a local copy of a remote repository on your computer. This includes all the branches and all of the history of repository. A typical workflow is to clone the repository, modify the code, stage the changes, commit the staged changes, and then push the changes back up to the remote repository. This requires access to, and knowing the URL of, a git <strong>remote</strong></li>
+<li><strong>Editing</strong>: Edit your code on your computer to fix a bug or work on an new feature</li>
+<li><strong><em>Staging</em></strong>: After you’ve modified a document, staging allows you to mark the file for inclusion in a future commit. If your terminal is set to the home directory of your repository, the command <code>git add &lt;filename&gt;</code> will allow you to stage changes.</li>
+<li><strong><em>Committing</em></strong>: Once a change or group of changes is staged, they can be committed to your local repository. A commit is a way to group a set of changes together under a common theme. Part of the commit is a commit message which allows you to summarize the purpose of the changes you made to the code. More on the anatomy of a good commit message later. <em>Note: You can pick and choose the staged files that you want to be included in each commit.</em></li>
+<li><strong><em>Pushing/Pulling</em></strong>: Pushing a commit is the way to incorporate changes from your local repository up to the remote repository. Think of it as pushing your changes up from your computer into the cloud. Conversely, pulling changes is taking changes that others have made to the remote repository and pulling them down from the cloud onto your local version of the repo.</li>
+</ul>
+</div>
+<div id="why-use-github" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Why use GitHub?<a href="github-in-practice.html#why-use-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/GitHubLogo.png" width="35%" style="float:right; padding:10px" /></p>
+<!-- GitHub is an online-based repository hosting system for Git repositories.  -->
+<p>As we will see below, GitHub has many useful features that expand upon Git and facilitate communication and collaboration amongst large groups of coders. <!-- GitHub "Issues" are one such feature that allow users to identify problems or ways to improve a set of code, to assign responsibility for the tasks needed to address them, and to keep track of the changes in the code that were made. --> Additionally, GitHub has features that allow for content generation, including static websites (like this one!) created using <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+<p>While GitHub can require a bit of a learning curve, we believe that it is well worth the effort and, in the long run, will save researchers a lot of time on trouble-shooting, reproducing results, and sharing analysis.</p>
+</div>
+<div id="alternatives-to-github" class="section level3 hasAnchor" number="2.3.5">
+<h3><span class="header-section-number">2.3.5</span> Alternatives to GitHub<a href="github-in-practice.html#alternatives-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/GitHubAlternatives.png" width="20%" style="float:center; padding:10px" /></p>
+<p>It’s worth noting that GitHub is not the only hosting system for Git repositories (see Alternatives below), however it is the most popular system and is nearly ubiquitous in the sciences.</p>
+<ul>
+<li><a href="https://about.gitlab.com/">GitLab</a></li>
+<li><a href="https://bitbucket.org/product">Bitbucket</a></li>
+</ul>
+</div>
+</div>
+<div id="git-vs.-github" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Git vs. Github<a href="github-in-practice.html#git-vs.-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Even experienced coders are unsure of the boundary between git and github. The following table attempts to clarify which concept and feature are part of the git system and can be used independently from github. Github is the most widely used ‘remote’ git server as it offers great collaboration features.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature originally of Git</th>
+<th>Feature of Github Service</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>git does not have way to track problems and to-do items</td>
+<td><strong>issue tracking</strong> and other project management features are not connected to git, but github helps to integration project management with git</td>
+</tr>
+<tr class="even">
+<td><strong>commit</strong>: <br />track code changes and add a message describing this change (see <a href="#reading_commits">reading commits</a> )</td>
+<td>collaborators can add comments on commits beyond the commit<br />github issues can be cross-referenced in commit messages</td>
+</tr>
+<tr class="odd">
+<td><strong>diff</strong>: show the difference in two change sets, <br />can use command line, programming editor (Rstudio, VSCode, Eclipse, etc), or a specialized desktop application (MergeTool from Apple)</td>
+<td>comments directly in code changes per line and create/share perma-links per line for feeback from collaborators</td>
+</tr>
+<tr class="even">
+<td><strong>branch</strong>: git tracks these code versions for you and can provide lists using <code>git status</code>, <code>git branch -a</code> etc<br />many programing editors have a feature to visualize the tree/graph of branches</td>
+<td>github allows you to easily show and switch between branches to compare without having to ‘checkout’ in your current directory. and initiate a merge from there</td>
+</tr>
+<tr class="odd">
+<td><strong>merge</strong>: combine changes from one branch to another using several different methods, alert when there are conflicts and resolve conflicts. Can add a merge commit message to communicate</td>
+<td>github has an interface for merging directly on the website to help you preview what will happen without affecting your local repository, or the main branch</td>
+</tr>
+<tr class="even">
+<td><strong>Fork</strong>: simply copy of a repository that someone has decided to work on independently. In git, the repo that you forked from is called the ‘upstream’ repository.</td>
+<td>Github has a button to fork a repository into your own account, and keeps track of where that fork comes from, and which github also called the ‘upstream’ repository.</td>
+</tr>
+<tr class="odd">
+<td><strong>remote</strong>: git was designed to share, and so the original ‘git’ program has a feature built in to act as server from which you can clone (download) a repo, push (up) changes, pull (down) others changes into your code. An external git server is a ‘remote.’ However the ‘git server’ requires the command line to run and has no web interface built in.</td>
+<td>At it’s core, Github is a git server and provides a URL for repos for clone, push or pull. Unlike git, github can do this using WWW protocols and websites. There are other systems that provide the same ‘remote’ service as github</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>“<strong>pull request</strong>” is a process invented by github (and others) to facilitate accepting code from external collaborators. Additionally it fosters communication among collaborators, given them the ability to comment on code, contact reviewer, and connect to an issue tracking system. This perhaps is the core feature of github. Note that other git servers use different terms, for example git servers at gitlab.com calls them ‘<em>merge requests</em>’</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>“<strong>issue</strong>” Issue tracking is not unique to git workflows, but general project management practice. github has ‘lite’ project management features that integrate with git and code</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">Remote URL, Cloning</a><br>
+<img src="https://docs.github.com/assets/cb-69468/mw-1440/images/help/repository/https-url-clone-cli.webp" style="width:50.0%" alt="github ui for cloning" /></p></li>
+<li><p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">Branching</a><br>
+<img src="https://docs.github.com/assets/cb-36155/mw-1440/images/help/repository/file-tree-view-branch-dropdown-expanded.webp" style="width:50.0%" alt="image of branch UI in github" /></p></li>
+</ul>
+<div id="other-resources-for-this-section" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Other Resources for this section<a href="github-in-practice.html#other-resources-for-this-section" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/04-changes.html">Tracking Changes</a> from Software Carpentry’s “Version Control with Git”</li>
+<li><a href="https://github.com/git-guides/git-commit">Github’s git guide to commits</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Level Up Your
+Git Commit Messages</a> from the ‘free code camp’</li>
+</ul>
+</div>
+</div>
+<div id="how-people-communicate-using-commit-messages" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> How people communicate using commit messages<a href="github-in-practice.html#how-people-communicate-using-commit-messages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Reading through git commits is one of the best ways to learn about a codebase. Github is an excellent system for reviewing the history of project via it’s commits.</p>
+<ul>
+<li><a href="https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits">Commits</a> <br/>
+<img src="https://docs.github.com/assets/cb-48474/mw-1440/images/help/commits/commits-page.webp" style="width:50.0%" alt="github ui for viewing commits" /></li>
+</ul>
+<p>What are the features of git (independent of github) to use commit messages as communication? This is always covered in an introductory git course, but we summarize them here from the perspective of a communication system:</p>
+<ol style="list-style-type: decimal">
+<li>the set of changes to the code. when compare these changes to another version of the code, this is known as the “<strong>diff</strong>” (named for the utility that shows the changes)<br />
+</li>
+<li>the commit message</li>
+<li>option additional summary message</li>
+<li>other things not directly part of the commit that put the commit in context: the branch it’s in, the fork it’s a part of, and a link to a description of the feature or issue (more on all of those things later)</li>
+</ol>
+<div id="guidelines-for-using-commits" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Guidelines for using commits<a href="github-in-practice.html#guidelines-for-using-commits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The central feature of most version control system is the “commit” we describe above. And version control, at it’s heart, is a system for software developers to communicate. Understanding the motivation and context of the ‘git commit’ is key to interpreting a code repository.</p>
+<p>A git commit and the associate message should communicate:</p>
+<ul>
+<li>Why are these lines of code here? What feature does this bit of code help to implement, or which bug was fixed?</li>
+<li>What other code was changed, if any?<br />
+</li>
+<li>Who made this change so I can ask them for more information if I need to (e.g. to debug or make changes to improve the codebase)?</li>
+<li>To a limited extent, why is the code structured this way? (that is more often described in the code itself)</li>
+<li>If my program incorporates, imports, or otherwise depends on this code if affected by this change? That is, I depend on this codebase and something has changed that makes my system crash.</li>
+</ul>
+<p>We believe that approaching commits as communication will drive how you use git, and also help you to collaborate with github.</p>
+<p>These are some guidelines that software developers adhere to for using git commit</p>
+<ol style="list-style-type: decimal">
+<li>Keep the commit focused on a very specific problem to fix or feature to add. Note that features often require many small adjustments or changes and so a feature implementation in code can be a collection of these. Some use the phrase “atomic” to describe the changes you make: the smallest amount of change to make a difference, no less and no more.<br />
+</li>
+<li>could <em>should</em> still work when commiting. That is, don’t commit unworking code unless you absolutely have to.<br />
+</li>
+<li>the git commit message should focus on “why” instead of “what”: the code diff already shows the what</li>
+</ol>
+<p>Some things to emphasize:</p>
+<p>A good commit is focused on solving a single problem or making a change that helps to implementing a small feature. This way it’s very clear was code was changed or added and why. When we you look over all the changes in a commit, it will be hard to to get a holistic understanding if it includes many changes lines across many files. Explorering git commit logs in github will help you to understand how to use git more effectively. Less is more when it comes to commits.</p>
+<p>It takes discipline to make the commits completely atomic. We often think a change is complete, only to find a typo or other problem after the commit is made. Git has mechanisms for dealing with that we will define later.</p>
+<p>Git+github is not a backup system. If you want to save all the work you’ve done use a real file back-up system, not git. Mac and Windows both have backup systems built-in, and you should use them to make as frequent snapshots or backups as possible. You could also have a copy of your code folder on an external drive.</p>
+<p>What if you are given a large set of changes that only halfway implements a bug fix or feature? Would you understand what do to next? that is one reason why commits should be as complete as possible. Sometimes because of how teams agree to work you may be encouraged to push all of your code so it can be reviewed, even if you are not finished. In that case devs often put the acronym “<em>WIP</em>” for “<em>Work in Progress</em>” to indicate the code is not complete, or “<em>untested</em>” to indicate the code is complete but has not been rigorously tested.</p>
+</div>
+<div id="examples-of-ineffective-commits" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Examples of ineffective commits:<a href="github-in-practice.html#examples-of-ineffective-commits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A change to a few lines in the readme for grammar or other minor edit, with the message “<em>update readme</em>” - this doesn’t say why the README was updated!</p>
+<p>A commit that says “<em>daily commit</em>” or “<em>end-of-day commit</em>” tells me nothing about why the code was changed, or how I should start up to complete it if I’m asked. Again, this appears to be an attempt to use git+github as a backup system. Don’t do that.</p>
+<p>git commit message “<em>fix</em>” – fix what and why?</p>
+</div>
+<div id="effective-commits" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Effective Commits<a href="github-in-practice.html#effective-commits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Effective commits can be 1 line of code or hundreds, it really depends on the context and what is being communicated.</p>
+<p>One example of a common problem in coding is the ‘boundary error’ or the related ‘off by one’ error. for example if you are checking if a loop is done for a counter that is reduced each time, and you have <code>counter==0</code> but some how the counter can be negative in some cases, the loop will continue! The solution is to change your <code>if</code> condition to <code>counter &lt; 1</code> and a good commit message would “<em>fix boundary error in replication loop</em>” You don’t need to mention the file name - that will be in the diff.</p>
+</div>
+<div id="real-world-commit-work-flow" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Real-world commit work-flow<a href="github-in-practice.html#real-world-commit-work-flow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Being disciplined for commits is not easy and the authors frequently don’t follow this. Here is an example real-world, imperfect workflow:</p>
+<ol style="list-style-type: decimal">
+<li>for example adding a feature “add logistic regression analysis”</li>
+<li>add code to accomplish this (and data files, parameters, etc)</li>
+<li>quick testing show that is works!</li>
+<li>add changed files and commit “add log regression for X,Y, Z…”</li>
+<li>test again and find there is a problem!<br />
+</li>
+<li>fix the code, and test again</li>
+<li>git add the files and commit “fix missing parameter for logistic regression analysis” or something like that</li>
+</ol>
+<p>Now we have two commits (and hence two diff views) that address different parts of a problem.</p>
+<p>Git has some great features for dealing with this that we will cover, and that will make you understand why everyone else’s commit history looks so clean and perfect! One major solution is to use branching, which we described in detail below. Branching is like telling the sub-plot in a story. Other solutions are ‘squashed’ commits and amending commits.</p>
+<!-- todo optional add the story of learning and then explaining directions to a new destination -->
+</div>
+<div id="viewing-commits-and-diffs-using-git" class="section level3 hasAnchor" number="2.5.5">
+<h3><span class="header-section-number">2.5.5</span> Viewing commits and diffs using git<a href="github-in-practice.html#viewing-commits-and-diffs-using-git" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is covered in an introductory git course, but on your local computer, you can view the history of commits in many ways</p>
+<ul>
+<li>using <code>git reflog</code> in the terminal in your project’s directory</li>
+<li>Rstudio has a ‘history’ button in the ‘git’ control panel</li>
+<li>Visual Studio Code has an extensive git viewing system, and many extensions</li>
+<li>other editors like Eclipse include git viewers</li>
+<li>There are dozens of desktop git graphical programs (that change frequently so we are not recommending any)</li>
+</ul>
+</div>
+<div id="viewing-commits-and-diffs-using-github" class="section level3 hasAnchor" number="2.5.6">
+<h3><span class="header-section-number">2.5.6</span> Viewing commits and diffs using github<a href="github-in-practice.html#viewing-commits-and-diffs-using-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The git hub user interface makes it very easy to explore commits and code changes. For the workshop that this text supports, we walk through with an example.</p>
+<ol style="list-style-type: decimal">
+<li><p>Bookdown project, code fix
+Commit: <a href="https://github.com/rstudio/bookdown/commit/65aed2a4421fa97215cc0074e8d1ceba63e1339c" class="uri">https://github.com/rstudio/bookdown/commit/65aed2a4421fa97215cc0074e8d1ceba63e1339c</a>
+message: e”rror on generating description from a long sentence”</p></li>
+<li><p>NMML CRAWL project commit
+<a href="https://github.com/NMML/crawl/commit/e4f3b3e48b8d4fe738eca37c16c55247411d698e" class="uri">https://github.com/NMML/crawl/commit/e4f3b3e48b8d4fe738eca37c16c55247411d698e</a><br />
+“ADD CHECKS FOR longlat/geographic data”</p></li>
+</ol>
+<p>Github allows you to add comments to commits, for example to ask a qustion of your collaborator who made the commit ( <code>@kellykapsar do you think this will break the analysis later?</code> ). You can even add comments to a specific line in the code in commit (<code>please help me untangle this insane dplyr command</code>).</p>
+<p>Effective commits are an important communication tool for your collaborators, your future external collaborators, external users of your code, and maybe most importantly, your future self.</p>
+</div>
+</div>
+<div id="github-issue-tracking" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Github issue tracking<a href="github-in-practice.html#github-issue-tracking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ve mentioned github issue tracking serveral times and while they are not a git feature or necessary to use git, this feature has been a cornerstone of open source collaboration within and outside of software development teams.</p>
+<p>The basic concept and use is very simple. The second example of a commit from the CRAWL project has an associated github issue, and we know this because the dev who made the commit added a summary message “<em>longlat or geographic coordinate reference systems are not supported. this adds explicit checks and throws an error if geographic coordinates are provided. Fixes #39</em>” Github automatically links the issue ID number to the web page for the issue, which is
+<a href="https://github.com/NMML/crawl/issues/39">“add error catch when <code>sf</code> object is in 4326”</a>. Because the commit states it fixes this issue, we can assume that all the code necessary is in the commit, which you can confirm in the diff.</p>
+<p>The issue has the description “if an sf object is passed to crwMLE but with EPSG 4326, the fit will fail. However, no error message indicates this is a problem.” This describes the situation the causes the problem (related to the GIS coordinate reference system) and that when the problem occurs, the program doesn’t tell you. This program and problem are very specific to spatial ecology.</p>
+<p>This adds another effective communication tool to commits besides just the commit message and optional summary, and merges project management and version control.</p>
+<div id="alternatives" class="section level3 hasAnchor" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> Alternatives<a href="github-in-practice.html#alternatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Github is not the only service to do this, and there are other, industrial-strenght project management tools that can create this link from issue to commit. Many other large open source projects use non-github issue tracking tools, for example the Mozilla project, especially those that pre-date github, or don’t want to depend on a commercial entity like github.com.<br />
+<!-- for example ROpenSci?  Link --></p>
+<p>Can you find examples of clearly defined issues and how someone solved the problem in a codebase or package that you use?</p>
+<p>We should note that when you view the commits on the program on your computer as described above, the issue number has no link since this is only a github thing. There may be an extension or add-on for your programming editor that creates this link to github for you.</p>
+</div>
+<div id="effective-issues-are-focused" class="section level3 hasAnchor" number="2.6.2">
+<h3><span class="header-section-number">2.6.2</span> Effective issues are focused<a href="github-in-practice.html#effective-issues-are-focused" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Like commits, issues are most effective when they are focused, which is intuitively not unlike a to-do list. Writing “get organized” as an item on your to-do list is not very helpful. Github (and other sites like it) have additional (and optional) project management features to organize larger aspects of your project. These are often tied to ‘releases’ of software projects which we will discuss later.</p>
+<p>A typical workflow for combining github issue tracking and commits is:</p>
+<ol style="list-style-type: decimal">
+<li>determine a problem to fix, or a feature to add</li>
+<li>create an issue describing that in github and note the issue number</li>
+<li>edit your code to address the issue</li>
+<li>as you add and commit files, include the issue number in the commit message or summary.<br />
+</li>
+<li>test</li>
+<li>push commits to the remote</li>
+<li>repeat steps above until the issue is fixed</li>
+<li>optionally add comments to the issue if you want to help your collaborators understand your approach, or more things to do</li>
+<li>close the issue</li>
+</ol>
+<p>Note this workflow is very appropriate for a project with a single developer. In addition we mentioned earlier that there are methods for helping you organize or collect multiple commits for better communication. Git branches help both collaboration and communication.</p>
+</div>
+<div id="example-issues" class="section level3 hasAnchor" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> Example Issues<a href="github-in-practice.html#example-issues" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Example: How ask package maintainers to accommodate the global dateline and very high latitudes</strong></p>
+<ul>
+<li><a href="https://github.com/rstudio/leaflet/issues/495" class="uri">https://github.com/rstudio/leaflet/issues/495</a>
+<ul>
+<li>This is a great example of an obtuse issue. There is an R package “MapView” this is a 1-stop-mapping thing, super easy. Someone there raised an issue. MapView depends on RLeaflet (I just know this, it doesn’t say that anywhere in the issue). The leader of the MapView project realized that it was an RLeaflet problem, so copy/pasted the issue into the RLeaflet project. I say RLeaflet because that project actually heavily depends on the original leaflet.js for javascript, which most people just called “leaflet”. Another interesting thing is that the first commenter (Darcy somebody) says that polygons are fine, which does not need to be said because the OP already said it was ok, but no one piled on and said “he already said that.” Note the issue was raised in 2015 and no one was assigned and it was not fixed. The issue was reference in 2018 for new issue (created by Rstudio) to fix it, and I only know that because in the new issue they referenced the issue number. but even that one was not fixed. also in the original issue is an extensive post to show a work-around. That info now just =sits here in a github issue. A question for the group: what should have been done by the project to deal with this issue (hints, create an issue to add the work-around in the documentation, when creating a new issue, close the original and reference the new one.. possibly tag it as “wontfix” or better tag it in a project roadmap to make it clear they care about it and will deal with at some future time. See alaso <a href="https://github.com/rstudio/leaflet/issues/225" class="uri">https://github.com/rstudio/leaflet/issues/225</a></li>
+</ul></li>
+</ul>
+<p><strong>Example: ggmap package</strong></p>
+<p>Issue with Pacific mapping with ggmap: <a href="https://github.com/dkahle/ggmap/issues/326" class="uri">https://github.com/dkahle/ggmap/issues/326</a>
+* (solution is to change the projection, the software is not the problem, but is it in the docs?)
+* Another person had a question/problem but it was totally ignored: <a href="https://github.com/dkahle/ggmap/issues/295" class="uri">https://github.com/dkahle/ggmap/issues/295</a><br />
++ Why is that?<br />
++ Is there a document for this package describing how to participate in the community?<br />
++ Are the volunteers following the lead of the owner?
++ Who is fine ignoring these?</p>
+</div>
+</div>
+<div id="practical-git-collab-using-branches" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Practical git collab using branches<a href="github-in-practice.html#practical-git-collab-using-branches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can think of branches as a kind of internal copy within your repository. When working on a branch, the files in the main repository are untouched. You can stage changes, make commits, and push/pull to remote within a branch and it won’t affect the main repository. This makes branches very useful when you want to make substantial changes to your repository that you’re not quite sure will work.</p>
+<p>Branches are also helpful when collaborating with others. If one person needs to run the main model, but you want to test out tweaking a few things, you can work on a branch while they stay on the main branch. Then, once your confident the changes in your branch are working correctly you can merge them from your branch back into the main repo.</p>
+<p>Branches also serve as method for organizing multiple commits together, especially if you are using a branch to address an issue.</p>
+<p>A typical workflow with branches is:</p>
+<ol style="list-style-type: decimal">
+<li>create or identify an issue that needs work on.</li>
+<li>create a branch with a short name for that issue, and ideally include the issue number (e.g. 39-catch-4326-error if we use the example above)
+<ul>
+<li>there are several methods and workflows for creating branches locally and on the remote, but that’s covered in a later workshop.<br />
+</li>
+</ul></li>
+<li>checkout the branch</li>
+<li>edit your code to address the issue and test</li>
+<li>as you add and commit files, include the issue number in the commit message or summary.<br />
+</li>
+<li>push commits to the remote branch</li>
+<li>repeat steps above until the issue is fixed</li>
+<li>checkout the main branch</li>
+<li>merge your “featue branch” into main</li>
+<li>handle merge conflicts if necessary (see below)</li>
+</ol>
+<p>Some development teams include an issue number in the name of the branches. You shouldn’t using the <code>#</code> in the branch name, and github does not automatically link a branch with an issue but this really helps identify what the branch was made for.</p>
+<div id="merging-and-conflicts" class="section level3 hasAnchor" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Merging and conflicts<a href="github-in-practice.html#merging-and-conflicts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A real magic aspect of git is how it can merge two different sets of code without issue so often.</p>
+<p>However conflicts do arise and git has a special way to deal with them. They are a normal part of the development process when two things are changed near the same place. If it happens, git places “conflict marks” inside your code, and the solution is simply to examine the two changes (incoming = stuff you are merging in) and “current” or “head” (which is the place you started from) and decide which to keep and what to change, and then removing the conflict marks.</p>
+<div class="float">
+<img src="https://res.cloudinary.com/jesstemporal/image/upload/v1643765013/git-conflict-resolution/conflict-displayed-on-vim-fig7_ewxhxf.png" alt="image of conflict" />
+<div class="figcaption">image of conflict</div>
+</div>
+<p>There is no magic other than your brain and your code editor. After solving the conflicts in the file, you add the file to the stage (see above) and commit. Then the merge can be completed. Github has a</p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" class="uri">https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging</a></li>
+<li><a href="https://jtemporal.com/solving-conflicts/">Solving conflicts in git</a> blog post by Jessica Temporal</li>
+</ul>
+</div>
+</div>
+<div id="collaborative-coding-forking-and-pull-requests" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Collaborative coding: Forking and pull requests<a href="github-in-practice.html#collaborative-coding-forking-and-pull-requests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure"><span style="display:block;" id="fig:fork"></span>
+<img src="figures/CloneVsFork.png" alt="https://toolsqa.com/git/difference-between-git-clone-and-git-fork/" width="50%" style="float:left; padding:10px" />
+<p class="caption">
+Figure 2.3: <a href="https://toolsqa.com/git/difference-between-git-clone-and-git-fork/" class="uri">https://toolsqa.com/git/difference-between-git-clone-and-git-fork/</a>
+</p>
+</div>
+<p>When working on large open source project, it’s a good idea to not let anybody have immediate edit access to the repository where that project is kept. However, you still want to allow the broader user community to participate and contribute to the project. Forking is one way to address this problem. <strong><em>Forking</em></strong> a repository allows you to create a copy of a given repository on your personal GitHub account. When you make changes to a forked repository, the original repository is not affected. However, if you have some changes that you think would help to improve the original project, you can submit a <strong><em>pull request</em></strong> to the owners of the original repository. If they like your change, then they can accept and incorporate it into the original project’s repository.</p>
+<p>Still confused? <a href="https://toolsqa.com/git/difference-between-git-clone-and-git-fork/">This webpage</a> has a really nice explanation of forking vs. cloning, along with helpful diagrams.</p>
+<div id="pull-request-examples" class="section level3 hasAnchor" number="2.8.1">
+<h3><span class="header-section-number">2.8.1</span> Pull-request examples<a href="github-in-practice.html#pull-request-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Fixing typos in the ‘bookdown’ package</strong></p>
+<p>Example of “bookdown” markdown site with someone going through and fixing all the typos but not adding any content, which makes for a focused commit:</p>
+<p><a href="https://github.com/rstudio/bookdown/commit/50a1c1edac61bab191a8808a252ba0bb21538f0e" class="uri">https://github.com/rstudio/bookdown/commit/50a1c1edac61bab191a8808a252ba0bb21538f0e</a>
+message: Fix typos (#1458)</p>
+<p>there is a github pull request to merge this in, even for something this minor, to communicate with collaborators: <a href="https://github.com/rstudio/bookdown/pull/1458" class="uri">https://github.com/rstudio/bookdown/pull/1458</a> ( we cover those later )</p>
+</div>
+</div>
+<div id="example-of-a-real-world-detective-work-using-github" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> Example of a real-world detective work using github<a href="github-in-practice.html#example-of-a-real-world-detective-work-using-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here is a detective story of how I found why my python code was not working… and I blame the Pandas project.</p>
+<ul>
+<li><a href="https://github.com/krishnanlab/geneplexus_app/commit/80256c10d65f22fdd63898225948e36d4d63d29b">My commit</a> where I describe the problem</li>
+<li><a href="https://github.com/pandas-dev/pandas/issues/8206">Found someone else that had the same problem</a></li>
+<li><a href="https://github.com/pandas-dev/pandas/blob/bdc79c146c2e32f2cab629be240f01658cfb6cc2/pandas/core/generic.py#L3888">Found this in the source-code for the documentation</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/version/1.5/whatsnew/v1.5.0.html#other-deprecations">This is mentioned in the release notes for verion 1.5.0</a>
+<ul>
+<li>The release notes have a link to the issue(s) for every change, including this one GH9568 , which spells out why the change was made.</li>
+</ul></li>
+<li>Since I didn’t even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don’t get burned by changes into the packages I depend upon.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="repo-organization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

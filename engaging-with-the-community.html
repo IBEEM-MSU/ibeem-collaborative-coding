@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Resources |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science </title>
+  <title>Chapter 5 Engaging with the community |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science </title>
   <meta name="description" content="This is a guide to developing and engaging with open/team science projects on GitHub." />
   <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Resources |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science " />
+  <meta property="og:title" content="Chapter 5 Engaging with the community |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science " />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a guide to developing and engaging with open/team science projects on GitHub." />
   <meta name="github-repo" content="IBEEM-MSU/ibeem-collaborative-coding" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Resources |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science " />
+  <meta name="twitter:title" content="Chapter 5 Engaging with the community |  Collaborative Coding for Scientific Research:   Git, GitHub, and open science " />
   
   <meta name="twitter:description" content="This is a guide to developing and engaging with open/team science projects on GitHub." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="glossary.html"/>
-<link rel="next" href="appendix-workshop-outline.html"/>
+<link rel="prev" href="collaborating.html"/>
+<link rel="next" href="exercise.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -216,44 +216,41 @@ Collaborative Coding for Scientific Research: <br> Git, GitHub, and open science
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="resources" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Resources<a href="resources.html#resources" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Eager to dive deeper into collaborative coding? Here are some more great resources that delve into specific areas we’ve overviewed during this workshop.</p>
-<div id="data-wrangling" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Data Wrangling<a href="resources.html#data-wrangling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="engaging-with-the-community" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Engaging with the community<a href="engaging-with-the-community.html#engaging-with-the-community" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues.</p>
+<div id="complain-or-fix" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Complain or Fix?<a href="engaging-with-the-community.html#complain-or-fix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Many simply write issues about what they want to see fixed or improved, but often the response is “put in a PR.” Instead, why not write the issue and present your proposed fix at the same time? That changes the tone from “here is problem”, and even better is asking “is this a problem?” Including the fix instead changes the conversation positively “is this a solution?” which is more efficient.</p>
+<p>If you can’t solve the problem, then of course you are not expected to proposed a fix it, but an offer to fix or help goes a long way.</p>
+</div>
+<div id="requesting-helpfeatures-or-reporting-bugs-using-reprexes.-1" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Requesting help/features or reporting bugs (using reprexes).<a href="engaging-with-the-community.html#requesting-helpfeatures-or-reporting-bugs-using-reprexes.-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-how-ask-package-maintainers-to-accommodate-the-global-dateline-and-very-high-latitudes" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Example: How ask package maintainers to accommodate the global dateline and very high latitudes<a href="engaging-with-the-community.html#example-how-ask-package-maintainers-to-accommodate-the-global-dateline-and-very-high-latitudes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><p><strong><a href="https://edirepository.org/resources/cleaning-data-and-quality-control">Data Cleaning and Quality Control (Environmental Data Initiative)</a></strong>: A great overview of best practices in organizing data sets, arranging data tables, and defining levels of data processing (Note: Focus on environmental data, but principles apply to any discipline).</p></li>
-<li><p><strong><a href="https://edirepository.org/resources/creating-metadata-for-publication">Metadata and the Ecological Metadata Language (Environmental Data Initiative)</a></strong>: Introduction to Ecological Metadata Language with tools for creating EML-formatted metadata (Note: Focus on environmental data).</p></li>
+<li><a href="https://github.com/rstudio/leaflet/issues/495" class="uri">https://github.com/rstudio/leaflet/issues/495</a>
+<ul>
+<li>This is a great example of an obtuse issue. There is an R package “MapView” this is a 1-stop-mapping thing, super easy. Someone there raised an issue. MapView depends on RLeaflet (I just know this, it doesn’t say that anywhere in the issue). The leader of the MapView project realized that it was an RLeaflet problem, so copy/pasted the issue into the RLeaflet project. I say RLeaflet because that project actually heavily depends on the original leaflet.js for javascript, which most people just called “leaflet”. Another interesting thing is that the first commenter (Darcy somebody) says that polygons are fine, which does not need to be said because the OP already said it was ok, but no one piled on and said “he already said that.” Note the issue was raised in 2015 and no one was assigned and it was not fixed. The issue was reference in 2018 for new issue (created by Rstudio) to fix it, and I only know that because in the new issue they referenced the issue number. but even that one was not fixed. also in the original issue is an extensive post to show a work-around. That info now just =sits here in a github issue. A question for the group: what should have been done by the project to deal with this issue (hints, create an issue to add the work-around in the documentation, when creating a new issue, close the original and reference the new one.. possibly tag it as “wontfix” or better tag it in a project roadmap to make it clear they care about it and will deal with at some future time.</li>
+</ul></li>
+<li><a href="https://github.com/rstudio/leaflet/issues/225" class="uri">https://github.com/rstudio/leaflet/issues/225</a></li>
 </ul>
 </div>
-<div id="data-processing" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Data Processing<a href="resources.html#data-processing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p><strong><a href="https://targets-ecology.netlify.app/">Data pipelining in R using the Targets package (Targets for Ecologists)</a></strong>: A step-by-step walkthrough guide for using the data pipelining tool “Targets” in the R programming language. Data pipelining is a great way to ensure reproducibility and speed up the generation of results by setting up the computer to keep track of all the steps in your analysis and re-running only those that are alterred when you make a change to the code.</p></li>
-<li><p><strong><a href="https://www.r-bloggers.com/2024/03/r-doparallel-how-to-parallelize-r-dataframe-computations/?utm_source=phpList&amp;utm_medium=email&amp;utm_campaign=R-bloggers-weekly&amp;utm_content=HTML">R doParallel: How to Parallelize R DataFrame Computations (Radečić 2024)</a></strong>: Overview of the doParallel package in R and its ability to speed up data analyses by running in chunks of data in parallel.</p></li>
-<li><p><strong><a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13982">Implementing GitHub Actions continuous integration to reduce error rates in ecological data collection (Kim et al. 2022)</a></strong></p></li>
-</ul>
+<div id="example-ggmap-package" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Example: ggmap package<a href="engaging-with-the-community.html#example-ggmap-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Issue with Pacific mapping with ggmap: <a href="https://github.com/dkahle/ggmap/issues/326" class="uri">https://github.com/dkahle/ggmap/issues/326</a>
+* (solution is to change the projection, the software is not the problem, but is it in the docs?)
+* Another person had a question/problem but it was totally ignored: <a href="https://github.com/dkahle/ggmap/issues/295" class="uri">https://github.com/dkahle/ggmap/issues/295</a><br />
++ Why is that?<br />
++ Is there a document for this package describing how to participate in the community?<br />
++ Are the volunteers following the lead of the owner?
++ Who is fine ignoring these?</p>
 </div>
-<div id="gitgithub-and-version-control" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Git/GitHub and Version Control<a href="resources.html#gitgithub-and-version-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p><strong><a href="https://learngitbranching.js.org/">Learn git branching interactively</a></strong>: A fun walk-through to learn basic git commands, including working on branches. Also includes some more advanced git techniques.</p></li>
-<li><p><strong><a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14108">Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution (Braga et al. 2023)</a></strong></p></li>
-<li><p><strong><a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928">Excuse Me, Do You Have a Moment to Talk About Version Control? (Bryan 2018)</a></strong>: (Note: Full text available with MSU login)</p></li>
-</ul>
 </div>
-<div id="example-repositories" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> Example repositories<a href="resources.html#example-repositories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="package" class="section level3 hasAnchor" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> Package<a href="resources.html#package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-<div id="project" class="section level3 hasAnchor" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> Project<a href="resources.html#project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-<div id="reference" class="section level3 hasAnchor" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> Reference<a href="resources.html#reference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="engaging-with-the-community-1" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Engaging with the community<a href="engaging-with-the-community.html#engaging-with-the-community-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues.</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -261,8 +258,8 @@ Collaborative Coding for Scientific Research: <br> Git, GitHub, and open science
           </div>
         </div>
       </div>
-<a href="glossary.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="appendix-workshop-outline.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="collaborating.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
