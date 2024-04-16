@@ -264,7 +264,7 @@ Effective commits are an important communication tool for your collaborators, yo
 
 ## GitHub issue tracking
 
-We've mentioned GitHub issue tracking several times. While isse tracking is not a git feature or necessary to use git, this feature has been a cornerstone of open source collaboration within and outside of software development teams.  
+We've mentioned GitHub issue tracking several times. While issue tracking is not a git feature or necessary to use git, this feature has been a cornerstone of open source collaboration within and outside of software development teams.  
 
 The basic concept of an issue and its' use is very simple. The second example of a commit above from the CRAWL project has an associated GitHub issue, and we know this because the dev who made the commit added a summary message "*longlat or geographic coordinate reference systems are not supported. this adds explicit checks and throws an error if geographic coordinates are provided. Fixes #39*"  GitHub automatically links the issue ID number to the web page for the issue, which is 
 ["add error catch when `sf` object is in 4326"](https://github.com/NMML/crawl/issues/39). Because the commit states it fixes this issue, we can assume that all the code necessary is in the commit, which you can confirm in the diff.  
