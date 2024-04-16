@@ -130,6 +130,13 @@ You may see the other following files in a repository.   Often the files are nam
  - 'CONTRIBUTING` good open source projects have instructions and guidelines for contributing to a project.  This is very valuable for your own projects as they are instructions for your colleagues who may contribute code, or to your future self when you forget how you get everything setup!  
  - 'man' directory this is short for 'manual' and comes from Unix/Linux system called 'man pages' which I guess is for the manual as a collection of help files. 
 
+## Github Workflows
+
+You may see frequent mention of github workflows and how it can improve your coding live 200%!   Github provides excellent features for automating processes you may repeat every time you push a commit or merge request.  These time-savers come at the cost of a learning curve, and adapting your own work process to a git workflow.   The important things about github workflows are 
+
+1. if there is a .github folder, then the repository may be using workflows
+2. if you fork this repo, the workflows may not run properly for you as they take some setup. That is OK.  
+3. if you want to collaborate with a project, they may have automated workflows when you make a Pull Request (PR) that run tests or otherwise check your code.    This may reject the PR but don't fret usually helpful devs will explain what you need to do to make the tests pass.  Just ask! 
 
 
 ## Branches, Forks, Tags, Versions, And Releases
