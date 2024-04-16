@@ -174,7 +174,7 @@ What are the features of git (independent of GitHub) to use commit messages as c
 
 ### Guidelines for using commits
 
-The central feature of most version control system is the "commit" we describe above. nd version control, at it's heart, is a system for software developers to communicate. Understanding the motivation and context of the 'git commit' is key to interpreting a code repository.
+The central feature of most version control system is the "commit" we describe above. And version control, at it's heart, is a system for software developers to communicate. Understanding the motivation and context of the 'git commit' is key to interpreting a code repository.
 
 A git commit and the associate message should communicate:
 
