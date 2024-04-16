@@ -6,15 +6,17 @@ This is the outline and time for a 2-hour in-person workshop based on this book
 
 **Intro**
 
-- orientation: point out existing sources of doc on git (carpentries, books like "happy git...", websites, etc)
-- why use git and github?
-- framework `code -> git -> github`
+- focus of this workshop
 - participant introductions, optional discussion of previous experiences
+
 - ensure everyone has a github account
 
 ## Seminar/Demo (65 min)
 
 **git/github in practice (25 mi)**
+
+- framework `code -> git -> github`
+- why use git and github?
 
 - list of git features/ commands we are assuming familiarity with in a git vs. github comparison
 - foreach {commits, issues, branches, forks & pull requests, rebase}:

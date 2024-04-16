@@ -82,8 +82,6 @@ Which of these categories does the code for this book (and other books like it) 
 
 ## Finding and Using Documentation
 
-<!-- note this replaces what is currently chapter 5 -->
-
 Equally as important as code is the documentation. Without it we don't know how to use the code, making it worthless!  Here are some typical sources of documentation in the anatomy of a codebase: 
 
 
@@ -129,11 +127,9 @@ You may see the other following files in a repository.   Often the files are nam
 
 ## Github Workflows
 
-You may see frequent mention of github workflows and how it can improve your coding live 200%!   Github provides excellent features for automating processes you may repeat every time you push a commit or merge request.  These time-savers come at the cost of a learning curve, and adapting your own work process to a git workflow.   The important things about github workflows are 
+You may see frequent mention of github workflows and how it can improve your coding live 200%!   Github provides excellent features for automating processes you may repeat every time you push a commit or merge request.  These time-savers come at the cost of a learning curve, and adapting your own work process to a git workflow.   The important things about github workflows are:
 
 1. if there is a .github folder, then the repository may be using workflows
-2. if you fork this repo, the workflows may not run properly for you as they take some setup. That is OK.  
-3. if you want to collaborate with a project, they may have automated workflows when you make a Pull Request (PR) that run tests or otherwise check your code.    This may reject the PR but don't fret usually helpful devs will explain what you need to do to make the tests pass.  Just ask! 
+2. if you fork this repo, the workflows may not run properly for you as they take some setup. That is OK. 
+3. if you want to collaborate with a project, they may have automated workflows when you make a Pull Request (PR) that run tests or otherwise check your code.    This may reject the PR but don't fret -- usually helpful developers will explain what you need to do to make the tests pass.  Just ask! 
 
-
-## Branches, Forks, Tags, Versions, And Releases
