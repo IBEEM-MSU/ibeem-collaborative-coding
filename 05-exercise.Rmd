@@ -8,6 +8,8 @@ The 'code' in this repository is actually "markdown", which is code that is tran
 
 ## Instructions
 
+Link to the GitHub repository: https://github.com/IBEEM-MSU/ibeem-collaborative-coding
+
 Note: Feel free to work on your own or in small groups for this exercise. 
 
 1. Choose from the following options: 
