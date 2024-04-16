@@ -1,18 +1,5 @@
 # Collaborating with GitHub {#collaborating}
 
-## Understanding commits 
-
-### How people communicate using commit messages
-Perspective of commit messages as communication can change what you include in a commit (independent of github)
-
-
-## Project management with GitHub
-Using Github's project management lite features
-
-## Issue management
-What is issue management? 
-Following issues and their fixes can help you track down your bugs 
-
 ### Pandas Example: 
 * [My commit](https://github.com/krishnanlab/geneplexus_app/commit/80256c10d65f22fdd63898225948e36d4d63d29b)  
 * [Found someone else that had the same problem](https://github.com/pandas-dev/pandas/issues/8206) 
@@ -22,9 +9,7 @@ Following issues and their fixes can help you track down your bugs
 * Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   
 
 
-## Communication using issues 
-
-### Requesting help/features or reporting bugs (using reprexes).  
+## Requesting help/features or reporting bugs (using reprexes).  
 
 ### Example: How ask package maintainers to accommodate the global dateline and very high latitudes 
 * https://github.com/rstudio/leaflet/issues/495
@@ -44,15 +29,5 @@ Issue with Pacific mapping with ggmap: https://github.com/dkahle/ggmap/issues/32
 
 Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
 
-### What is a 'pull request?' (PR) (hint: it's a github thing)
-* A PR lifecycle: 
-  + Issue
-  + Fork/Branch
-  + PR
-  + Merge
-
-## Github link awesomeness
-* Permalinks in code and issues
-* References to issues from commits and referencing to commits from comments
 
 
