@@ -1,15 +1,17 @@
+<!-- 
 # Collaborating with GitHub {#collaborating}
 
-<!-- ### Pandas Example: 
+### Pandas Example: 
 * [My commit](https://github.com/krishnanlab/geneplexus_app/commit/80256c10d65f22fdd63898225948e36d4d63d29b)  
 * [Found someone else that had the same problem](https://github.com/pandas-dev/pandas/issues/8206) 
 * [Found this in the source-code for the documentation](https://github.com/pandas-dev/pandas/blob/bdc79c146c2e32f2cab629be240f01658cfb6cc2/pandas/core/generic.py#L3888)
 * [This is mentioned in the release notes for verion 1.5.0](https://pandas.pydata.org/pandas-docs/version/1.5/whatsnew/v1.5.0.html#other-deprecations)
   + The release notes have a link to the issue(s) for every change, including this one GH9568 , which spells out why the change was made.
-* Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   --> 
+* Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon
 
 ## Requesting help/features or reporting bugs (using reprexes).  
 
+.   --> 
 <!-- create a new chapter for this topic -->
 
 # Engaging with the community 
