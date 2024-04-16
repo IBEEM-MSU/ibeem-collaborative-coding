@@ -1,30 +1,30 @@
 # Collaborating with GitHub {#collaborating}
 
-## Understanding commits 
-
-### How people communicate using commit messages
-Perspective of commit messages as communication can change what you include in a commit (independent of github)
-
-
-## Project management with GitHub
-Using Github's project management lite features
-
-## Issue management
-What is issue management? 
-Following issues and their fixes can help you track down your bugs 
-
-### Pandas Example: 
+<!-- ### Pandas Example: 
 * [My commit](https://github.com/krishnanlab/geneplexus_app/commit/80256c10d65f22fdd63898225948e36d4d63d29b)  
 * [Found someone else that had the same problem](https://github.com/pandas-dev/pandas/issues/8206) 
 * [Found this in the source-code for the documentation](https://github.com/pandas-dev/pandas/blob/bdc79c146c2e32f2cab629be240f01658cfb6cc2/pandas/core/generic.py#L3888)
 * [This is mentioned in the release notes for verion 1.5.0](https://pandas.pydata.org/pandas-docs/version/1.5/whatsnew/v1.5.0.html#other-deprecations)
   + The release notes have a link to the issue(s) for every change, including this one GH9568 , which spells out why the change was made.
-* Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   
+* Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   --> 
+
+## Requesting help/features or reporting bugs (using reprexes).  
+
+<!-- create a new chapter for this topic -->
+
+# Engaging with the community 
+
+Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
 
 
-## Communication using issues 
+## Complain or Fix?
 
-### Requesting help/features or reporting bugs (using reprexes).  
+Many simply write issues about what they want to see fixed or improved, but often the response is "put in a PR."  Instead, why not write the issue and present your proposed fix at the same time?  That changes the tone from  "here is problem", and even better is asking "is this a problem?"  Including the fix instead changes the conversation positively "is this a solution?" which is more efficient.  
+
+If you can't solve the problem, then of course you are not expected to proposed a fix it, but an offer to fix or help goes a long way.   
+
+
+## Requesting help/features or reporting bugs (using reprexes).  
 
 ### Example: How ask package maintainers to accommodate the global dateline and very high latitudes 
 * https://github.com/rstudio/leaflet/issues/495
@@ -44,15 +44,5 @@ Issue with Pacific mapping with ggmap: https://github.com/dkahle/ggmap/issues/32
 
 Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
 
-### What is a 'pull request?' (PR) (hint: it's a github thing)
-* A PR lifecycle: 
-  + Issue
-  + Fork/Branch
-  + PR
-  + Merge
-
-## Github link awesomeness
-* Permalinks in code and issues
-* References to issues from commits and referencing to commits from comments
 
 

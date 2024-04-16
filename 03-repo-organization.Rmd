@@ -1,25 +1,135 @@
 # Anatomy of a GitHub repository {#repo-organization}
 
-## Types of repositories: 
-* Package (installable) 
-* Project (useable) 
-* Reference (readable) 
+We've learned about git and github, which is how to work and communicate changes in code, but what about the code itself?   This section may help you decipher the files and folders in a code base to make use of it, regardless of where it may be.  However github makes it very easy to navigate code, and is integral to communicate what the code is for. 
 
-## Implications of repository type for re-use
+## Why read the source code?
 
-## Directory structures 
-What to look for when using someone else's code
+First, why would one want to be a github tourist in the first place? Let set out a few reasons you may examine or use another project's code (either via github or from some other site):
+
+- track down a problem you are having by understanding how the code is working or has changed;
+- use the code to perform a function you need, either in whole or in part;
+- to learn by seeing how others have written and organized code, programming structures, or files in a project. 
+- to change it, adding a feature or improve in some otherw ay 
+
+An old phrase in open source programming to describe how to track down a problems or understand how a program works is "use the source, Luke!" 
+
+There are dozens of blog posts explaining why reading source code is valuable. But you may be here to 
+Are there other reasons? 
+
+**Resources:**
+
+-  ["Reading Code Is an Important Skill. Here’s Why. "](https://builtin.com/software-engineering-perspectives/reading-code) by Tammy Xu, builtin.com
+
+## Understanding different types of code bases
+
+There are many ways to categorize software but, from the perspective of open science, let's consider the axis of how we use the software.  We find that there are (at least) three identifiable categories of code bases in terms of how you would use the code and maybe interact with the code base. 
+
+There are many other ways to categorize software (language, function, outputs, domain, style, etc etc), seeing code bases in these categories these may help you understand what kind of code base you are developing and thus organize your files and code.   
+
+Note that the organizational principles and conventions we described are independent of whether a code base is  a 'repository' (managed by git), or pushed to github.   We use github to discover, explore and use code but it could be anywhere, or even emailed to you as a zip full of files and folders.   
+
+
+### Package Codebase (installable)
+
+These are the free and open packages we install for R, Python, Julia, Java, Rust, etc etc.  These could also be stand-alone programs written in any language, for example we use the GDAL system 
+
+These may be called packages, libraries, binaries,extensions, etc.  
+
+The goal of these projects is to be used by others for a general purpose.   Most of the work we do is not to create packages, but if we find that "function" (NB need a better word here) of our code is applicable to a larger class of problems than the one we are solving, it may be worth creating a package.  
+
+As a user of such a package, you don't need to access the code via github - you can most likely install from a package system (like Pypi, R package mirror,)
+
+### Project Codebase (useable) 
+
+These codebases may not be installable projects, but are intended to be re-used by someone else, and that is often your future self!   Many of these include instructions for clone the code, getting all the piece you need installed, and using the program.  
+
+Another example of a 'project' repositories are specific-purpose web applications.   If your goal is to create a web application to help others use your software (rather than write a desktop application or leave it as command line only) then starting with an existing 
+
+The main difference between how you might use a "project" type repository is that, becuase it's not a package, you can't typically use package installers like `pip` or `install.packages()`.   Instead you will need to clone the repository to your computer and follow the install/usage instructions.  
+
+**Example**
+
+An example of this is https://github.com/billspat/hpcc_megadetector.  This code was created for a handful of researchers at MSU to run a specific chunk of python code to identify wildlife in millions of photos.  There are already existing deep-learning model code, and an install GUI program, but nothing specific to running on MSU's super computer.  To accomplish this we forked just the pieces of code we needed from this existing system, modified it to do the work we needed, created 'wrapper scripts' that coudl run them on HPC, and added documentation.  it hasn't been used in two years not and it would require updataing to be used again.  
+
+
+### Reference Codebase (readable) 
+
+There are many reason why code is published for transparent reference rather than to be re-useable.  For one, the programming effort to create code that's usable by others  is significant, which can delay or even hinder simpling getting a computational analysis completed.   Second, many of our research or academic code is useless with out the input data, and those data sets are frequently no able to be published if they are acquired from a private source.   
+
+Many projects use code to clean data sets in a reproducible way for use in analyses, but the configuration and setup required to keep these generic takes more time than available.    
+
+However there are many good practices one can follow to start with code that can be re-useable by others that we will cover in a later workshop.  
+
+You may clone this type of repository as well, but don't expect to be able to run much of it as they typically require specific input data or careful configuration of folders/files.   
+
+**Examples**
+
+* https://github.com/bioXgeo/neotropical_geodiv  : R code to support the publication "Assessing the impact of scale-dependent geodiversity on species distribution models in a biodiversity hotspot"
+
+This code, based on the Wallace R package, is organized to run specifically on MSU's HPC with a large input data from a previous project.   The code is published to demonstrate how the models were to run to generate the results in the publication.  
+
+* [Source Code for the Apollo 11 Mission](https://github.com/chrislgarry/Apollo-11) Codebase in 'assembly language' that controlled vehicles for space travels.     This is clearly for reference!  There are no computers on which this could run (unless someone creates a vitual simulator of the Apollo command module that can run) 
+
+
+* https://github.com/krishnanlab/PyGenePlexus The Geneplexus project (Arjun Krishnan lab) creates and applies machine-learning models from gene networks to predict which novel genes may be related to a geneset one is ins=terested in.  It started as a reference code to support a paper.  This lab then honed the code to be more organized and logical, and while the project was not 'installable' but had instructions downloading the code, organizing the data and running the functions in Python.  We found creating an installable package made the system much easier to use for most people.   At that point they not only organized the code into a PIP-installed package, they improved and organized the code even further.   In addition it made it easier to incorporate their codebase into a website that created a graphical interface to selecting inputs and to vizualizing the outputs.   The web application could be a separate project that 'imported' the geneplexus package, rather than copy/pasted code that had to be constantly updated. The two projects(geneplexus package and geneplexus cloud-based web application) could the be worked on  concurrently. 
+
+
+Which of these categories does the code for this book (and other books like it) fall into?   If the book is to have several authors, then it may be a reuseable project.
+
 
 ## Dependencies/requirements
 
-## Interaction of source scripts 
-(R and python)
 
-## Package vs project structures
+## Finding and Using Documentation
 
-## Finding branches in GitHub
-Where to find and look at branches in GitHub 
+Equally as important as code is the documentation. Without it we don't know how to use the code, making it worthless!  Here are some typical sources of documentation in the anatomy of a codebase: 
 
-## Versioning and releases
 
-## Forks
+**The README file**.  Every codebase should have a `README` file.  While having a file named README is a longstanding tradition in source code, Github's innovation was to show the readme file below the code files, and to use markdown formatting to render a nice looking readme.  Now this is a core feature of github for many to have a great intro to their code.  The readme file does not have to be markdown and historically had no extension and was plain text (e.g. named `README` )
+
+**Text Files**  Historical open source linux code bases had several documentation files, usually all upper-case and with an extension, and plain text for example `README` `INSTALL` `LICENSE`   Windows does not like to open this but they can be opened in a programming editor, or by right clicking and selecting "open with..." and picking TextEdit (Mac), Notepad (Windows).  
+
+**doc folder** This is the obvious place to look but may be buried in the repository.   
+
+**Binary formats** A colleague would always write his documentation using MS Word becuase he could easily format it and include screen shots as needed.  The issue is that those files are not readable on github, and they are not source code, so any changes can't be tracked, and not everyone has MS Word, or a recent version.   Even PDF while universally readable in many browsers can't be tracked.  hence most packages use some form of text to write documentation, and Markdown makes this easy.  
+
+**generated** Packages use the techinque of creating documentation by adding it directly into the code using  special format, then running a documentation generator on it.  Typically the documentation is not directly reaable from the github repository, but the software maintainer runs a utility to generate the documentation that may or may not be kept and readable in sub-folder.   A common strategy is to put specially formatted comments (e.g. lines preceeded by `#` in Python and R, or using `/* .. */` block in C) before or inside the packages functions and files.  The documentation generator reads these comments and converts them to human-readable documentation.  
+
+R packages use the [Roxygen2](https://roxygen2.r-lib.org) utility, started in 2011 (I don't know what happened to roxygen version 1), which is based on the [Doxygen](https://en.wikipedia.org/wiki/Doxygen) utility used for C & C++ software from 1997.  Roxygen2 can generate R help files, which are not in HTML or Markdown format so are not readable on github.  However there is yet another R pacakge (YARP) called PackageDown  can generate a whole website from a properly formatted package.   
+
+Python packages often use the [Sphinx](https://www.sphinx-doc.org/en/master/) system for documentation 
+
+**External websites**  given the documentation generation systems often don't output markdown, many developers opt to create documentation externally, and sometimes keep this documentation in a different github project.   For python a common place to keep documentation is the ['readthedocs'](https://docs.readthedocs.io/) service 
+
+### Code as documentation
+
+We hope we've already convinced you that reading source code is a good idea.   Documentation is often an after thought of scientific programmers and so your best bet is to go directly to the code to determine what it does, and hopefully that code is written clearly with informative file, funciton, and variable names.   Even if there is good documentation, the source code is the definitive way to learn what a program is actually doing.   
+
+Like reading human language for understanding and interpretation, reading source code is a learned skill.  In both cases you get better as you see more examples and understand the contexts and cultures embedded in the symbols.   [This article](https://coderscat.com/learn-from-source-code/) from 'coderscat.com' has some great pointers for that. 
+
+Common advice given to help understand a code base is to run it yourself.   This largely depends on the type of code (see the section on project types).  
+
+### Tests: a great source of insight
+
+<-- TODO: add resources for R testing and Python testing -->
+
+We don't cover writing test code in this workshop, but you may have heard about it.  It's dependent up the language you are using.  In short, in a successful code project someone will have written a set of short functions that check if the result from running the code matches what you'd expect.    They are often run before you merge or push to a repository to esure everything is working as expected.  
+
+You don't have to know how to write these tests to be able to read and learn from them.   Most tests are in a "tests" or "test" folder.    If you look to see the commands leading up to a test you can learn how the author of the code base expects the code to be used.  
+
+### Other items documentation how to work with the code
+
+You may see the other following files in a repository.   Often the files are names with all caps and no extension, especially if the project has some  Unix/Linux provenance (as do many open source and research software projects).   On some systems (including github), upper case sorts before lower case, and so these files show at the top of a file listing since they are meant to be read before using the software.  
+
+ - `LICENSE`  see the chapter on licencsing here.  This documents under what conditions you may use thse software and pull from or change the code
+ - 'CONTRIBUTING` good open source projects have instructions and guidelines for contributing to a project.  This is very valuable for your own projects as they are instructions for your colleagues who may contribute code, or to your future self when you forget how you get everything setup!  
+ - 'man' directory this is short for 'manual' and comes from Unix/Linux system called 'man pages' which I guess is for the manual as a collection of help files. 
+
+## Github Workflows
+
+You may see frequent mention of github workflows and how it can improve your coding live 200%!   Github provides excellent features for automating processes you may repeat every time you push a commit or merge request.  These time-savers come at the cost of a learning curve, and adapting your own work process to a git workflow.   The important things about github workflows are:
+
+1. if there is a .github folder, then the repository may be using workflows
+2. if you fork this repo, the workflows may not run properly for you as they take some setup. That is OK. 
+3. if you want to collaborate with a project, they may have automated workflows when you make a Pull Request (PR) that run tests or otherwise check your code.    This may reject the PR but don't fret -- usually helpful developers will explain what you need to do to make the tests pass.  Just ask! 
+

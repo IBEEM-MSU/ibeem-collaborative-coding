@@ -15,7 +15,13 @@ description: "This is a guide to developing and engaging with open/team science 
 
 ## Abstract
 
-This is a guide to open/team science projects on GitHub. This is not an introduction to git but a follow-on to such an introduction. While there are many introductory tutorials out there, we have found that there is a lack of information on the “culture” of open science using git/GitHub. People discover others’ code/projects, but don’t quite understand how they are organized or how to bring up and problems they’ve encountered or suggested changes that they have. This workshop is designed to empower attendees to actively participate in and engage with the open science community by teaching the often overlooked norms and procedures for understanding and working with others’ code projects.
+This is a guide to open/team science projects on GitHub. This is not an introduction to git but a follow-on to such an introduction. While there are many introductory tutorials out there, we have found that there is a lack of information on the “culture” of open science using git/GitHub. 
+
+	- git command process are already described in in many tutorials such as the [Software Carpentries git workshop](https://swcarpentry.github.io/git-novice/), which does not cover Github
+	- how git commands work on Github are clearly covered github documentation
+	- our focus: how people actually use these things in a workflow; principles that help drive the workflows?
+	
+People discover others’ code/projects, but don’t quite understand how they are organized or how to bring up and problems they’ve encountered or suggested changes that they have. This workshop is designed to empower attendees to actively participate in and engage with the open science community by teaching the often overlooked norms and procedures for understanding and working with others’ code projects.
 
 ## Learning objectives
 

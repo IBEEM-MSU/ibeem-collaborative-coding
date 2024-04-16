@@ -1,0 +1,31 @@
+# Exercise: Working with someone else's repo {#exercise}
+
+For this exercise, you are going to use forking, commits, and pull requests to edit somebody else's repo. That somebody else is us - You will be editing this repo. Follow the instructions below to walk through this process.  
+
+## About Markdown
+
+Our 'code' is actually "markdown" which is code that is translated to formatted prose. 
+Markdown is a very easy format to learn, very widely used, and we used it for this book.   Github has it's own 'flavor' of markdown (GFM).   Here is a brief introduction to Markdown, please review how to create links using `[]` and `()`   
+
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+
+## Instructions
+
+1. Choose from the following options: 
+  * Identify a public repository on GitHub that falls into one of the three categories we discussed (package, project, reference).
+    * Note: We're especially looking for some more Python-based examples/repositories! 
+  * Identify a resource (website, tutorial, youtube video, etc.) that you find useful that relates to the content of this class.
+2. Create a fork of this repository (IBEEM-MSU/ibeem-collaborative-coding)
+3. Edit the text of the `10-resources.rmd` file to add in your repository/resouce. 
+  * Note: You can edit the text directly in GitHub (Click the pencil-shaped "Edit this File" button in the upper right hand corner after you click on the file name.) or you can fork the repository and then clone a copy down to your computer to edit in your preferred integrated development environment (VS Code, RStudio, etc.). 
+4. Create a descriptive commit message describing your change (and push to remote if working from a cloned repository). 
+5. Navigate back to the main page for the original repo and create a pull request. 
+6. Click the link to `compare across forks` at the top of the pull request. 
+7. Write a pull request that references your commit (use your commit hash to do so) and submit. 
+8. Pat yourself on the back for doing our job for us by generating resources/examples for future workshops! 
+
+```{r troubleshooting, echo=FALSE, out.width= "75%",  fig.cap="[Artwork by \\@allison_horst](https://twitter.com/allison_horst)"} 
+
+knitr::include_graphics("./figures/troubleshooting.png")
+```
