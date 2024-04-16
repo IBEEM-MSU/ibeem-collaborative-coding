@@ -1,0 +1,53 @@
+# Appendix: Workshop Outline
+
+This is the outline and time for a 2-hour in-person workshop based on this book
+
+## Intro (15 min)
+
+**Intro**
+
+- orientation: point out existing sources of doc on git (carpentries, books like "happy git...", websites, etc)
+- why use git and github?
+- framework `code -> git -> github`
+- participant introductions, optional discussion of previous experiences
+- ensure everyone has a github account
+
+## Seminar/Demo (65 min)
+
+**git/github in practice (25 mi)**
+
+- list of git features/ commands we are assuming familiarity with in a git vs. github comparison
+- foreach {commits, issues, branches, forks & pull requests, rebase}:
+    - (Kelly) define the term/feature: review of the feature, rely on previous workshops/existing doc (as written for ch2)
+    - (Kellly) point to how github works with this, link to github images and docs
+    - (Pat) describe important elements of this feature in practice: principles of using commits, how much code to put into a commit and why ( this helps to understand the language of OSS collaboration )
+    - (Pat) outline a typical workflow for using the feature
+        - this helps to understand the context of the culture of OSS collaboration
+        - real world example
+
+**Anatomy of a codebase (15 min)**
+
+- common elements (cover licensing here in 1 sentence and a link)
+- our taxonomy
+- example codebases
+
+**Using other's code in your work** (10 minutes)
+
+**Engaging with issues and PRs** ( 15 mintues )
+
+- demo of that for a README file (Pat/Beth's repo)
+- demo of that with our own book
+
+## Hands-on (20-25 min)
+
+**Exercise: work through a real PR** (20-25 mintues)
+
+- introducing bookdown and Markdown
+- ensure everyone has a github account
+- [exercise](08-exercise)
+- optional, bug bounty, find a typo or other bug and create issues in our repo
+- optional: download RStudio and create book to test it!
+
+## Conclusion (15 min)
+
+## Follow-up Survey
