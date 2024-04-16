@@ -1,7 +1,0 @@
-# GitHub workflows {#workflows}
-
-## Continuous Integration/Continuous Delivery (CI/CD) and github "workflows"
-
-### What is it?
-### Benefits 
-### GitHub workflows 
