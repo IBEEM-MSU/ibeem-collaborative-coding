@@ -1,8 +1,17 @@
 # Exercise: Working with someone else's repo {#exercise}
 
-For this exercise, you are going to use forking, commits, and pull requests to edit somebody else's repo. That somebody else is us - You will be editing this repo. Follow the instructions below to walk through this process.   
+For this exercise, you are going to use forking, commits, and pull requests to edit somebody else's repo. That somebody else is us - You will be editing this repo. Follow the instructions below to walk through this process.  
 
-## Instructions 
+## About Markdown
+
+Our 'code' is actually "markdown" which is code that is translated to formatted prose. 
+Markdown is a very easy format to learn, very widely used, and we used it for this book.   Github has it's own 'flavor' of markdown (GFM).   Here is a brief introduction to Markdown, please review how to create links using `[]` and `()`   
+
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+
+## Instructions
+
 1. Choose from the following options: 
   * Identify a public repository on GitHub that falls into one of the three categories we discussed (package, project, reference).
     * Note: We're especially looking for some more Python-based examples/repositories! 
