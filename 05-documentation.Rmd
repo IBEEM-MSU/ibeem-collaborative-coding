@@ -1,7 +1,0 @@
-# Finding and using documentation {#documentation}
-
-## Important elements to look out for 
-
-## Code as documentation
-
-## Issues, commits and MR as documentation
