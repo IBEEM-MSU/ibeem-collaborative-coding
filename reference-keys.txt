@@ -46,11 +46,9 @@ code-as-documentation
 tests-a-great-source-of-insight
 other-items-documentation-how-to-work-with-the-code
 github-workflows
-collaborating
-requesting-helpfeatures-or-reporting-bugs-using-reprexes.
 engaging-with-the-community
 complain-or-fix
-requesting-helpfeatures-or-reporting-bugs-using-reprexes.-1
+requesting-helpfeatures-or-reporting-bugs-using-reprexes.
 example-how-ask-package-maintainers-to-accommodate-the-global-dateline-and-very-high-latitudes
 example-ggmap-package
 engaging-with-the-community-1
