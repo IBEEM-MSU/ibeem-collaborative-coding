@@ -23,3 +23,11 @@ Eager to dive deeper into collaborative coding? Here are some more great resourc
 * **[Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution (Braga et al. 2023)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14108)**
 
 * **[Excuse Me, Do You Have a Moment to Talk About Version Control? (Bryan 2018)](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928)**: (Note: Full text available with MSU login)
+
+## Example repositories 
+
+### Package 
+
+### Project
+
+### Reference
