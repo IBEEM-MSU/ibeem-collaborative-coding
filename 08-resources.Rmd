@@ -27,6 +27,7 @@ Eager to dive deeper into collaborative coding? Here are some more great resourc
 ## Example repositories 
 
 ### Package 
+#### [tidycensus from Kyle Walker](https://github.com/walkerke/tidycensus)
 
 ### Project
 
