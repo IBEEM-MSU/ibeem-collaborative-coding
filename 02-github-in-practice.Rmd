@@ -394,21 +394,3 @@ Here is a detective story of how I found why my python code was not working... a
 * Since I didn't even need to specify this parameter (it was using the default value!) I just removed it from my code, and learned my lesson to keep my code as simple as possible so that I don't get burned by changes into the packages I depend upon.   
 
 
-# Collaborating
-
-## Requesting help/features or reporting bugs (using reprexes).  
-
-
-<!-- create a new chapter for this topic -->
-
-# Engaging with the community 
-
-Engaging with owners/maintainers and the broader coding community to identify and participate in discussion of issues. 
-
-
-## Complain or Fix?
-
-Many simply write issues about what they want to see fixed or improved, but often the response is "put in a PR."  Instead, why not write the issue and present your proposed fix at the same time?  That changes the tone from  "here is problem", and even better is asking "is this a problem?"  Including the fix instead changes the conversation positively "is this a solution?" which is more efficient.  
-
-If you can't solve the problem, then of course you are not expected to proposed a fix it, but an offer to fix or help goes a long way.   
-
