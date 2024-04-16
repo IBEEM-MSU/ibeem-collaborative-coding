@@ -76,6 +76,7 @@ data-processing
 gitgithub-and-version-control
 example-repositories
 package
+tidycensus-from-kyle-walker
 project
 reference
 appendix-workshop-outline
